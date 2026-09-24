@@ -1,54 +1,573 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>The Reign Is 0-2 &#183; Lana Straw Weekly</title>
-<meta name="description" content="Week 2, 2026. All Gold filed 152.14. Fart Toot scored 78.50 and is 0-2. Madison Beer won by 2.58. Open the Lana Straw Weekly issue or download the PDF."/>
-<link rel="canonical" href="https://j-r-j.github.io/lana-straw-week2-2026/magazine.html"/>
-<meta http-equiv="refresh" content="0; url=magazine.html"/>
-
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="Lana Straw Weekly"/>
-<meta property="og:url" content="https://j-r-j.github.io/lana-straw-week2-2026/magazine.html"/>
-<meta property="og:title" content="The Reign Is 0-2"/>
-<meta property="og:description" content="Week 2, 2026. All Gold filed 152.14. Fart Toot scored 78.50. Madison Beer lived by 2.58."/>
-<meta property="og:image" content="https://j-r-j.github.io/lana-straw-week2-2026/og-image.jpg"/>
-<meta property="og:image:type" content="image/jpeg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="Lana Straw Weekly Week 2 cover: the reign is 0-2"/>
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="The Reign Is 0-2"/>
-<meta name="twitter:description" content="Week 2, 2026. All Gold filed 152.14. Fart Toot scored 78.50. Madison Beer lived by 2.58."/>
-<meta name="twitter:image" content="https://j-r-j.github.io/lana-straw-week2-2026/og-image.jpg"/>
-
+<title>The Lana Straw Ledger, Week 2, 2026</title>
 <style>
-body{margin:0;font-family:Georgia,serif;background:#0b0b0b;color:#f4f1ea}
-.wrap{max-width:720px;margin:0 auto;padding:2rem 1.25rem;text-align:center}
-.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;color:#c9a227}
-h1{font-size:1.8rem;line-height:1.1;margin:.75rem 0}
-a.card{display:block;margin:1.25rem auto 0;max-width:640px;border:1px solid #2a2a2a;text-decoration:none;color:inherit;box-shadow:0 18px 50px rgba(0,0,0,.45)}
-a.card img{display:block;width:100%;height:auto}
-.btn{display:inline-block;margin:.6rem .35rem 0;padding:.85rem 1.25rem;background:#c9a227;color:#111;text-decoration:none;font-weight:700}
-.btn.ghost{background:transparent;color:#c9a227;border:1px solid #c9a227}
-.note{margin-top:1rem;font-size:.85rem;color:#9a9286}
+:root{
+  --backdrop:#2A2723; --paper:#FAF8F4; --card:#FFFFFF; --ink:#181510; --muted:#7A7265;
+  --line:#E5E0D6; --red:#CC1F2C; --gold:#8A6D2F; --scrim:rgba(10,8,6,.78);
+}
+@media (prefers-color-scheme: dark){:root{ --backdrop:#141210; }}
+:root[data-theme="dark"]{ --backdrop:#141210; }
+:root[data-theme="light"]{ --backdrop:#2A2723; }
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:8.5in 11in;margin:0}
+@media print{
+  body{background:#fff !important;padding:0 !important}
+  .rack{display:block;gap:0}
+  .sheet{zoom:1 !important}
+  .page{box-shadow:none !important;break-after:page;page-break-after:always;margin:0 auto}
+  .sheet:last-child .page{break-after:auto;page-break-after:auto}
+}
+body{background:var(--backdrop);margin:0;padding:34px 0 60px;
+  font:13.2px/1.48 'Courier New',Courier,monospace;color:var(--ink);
+  text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.rack{display:flex;flex-direction:column;align-items:center;gap:34px}
+.sheet{zoom:var(--pagescale,1)}
+.page{width:816px;height:1056px;background:var(--paper);box-shadow:0 8px 40px rgba(0,0,0,.45);
+  position:relative;overflow:hidden;padding:56px 52px 60px;display:flex;flex-direction:column}
+.page.cover{padding:0;background:#101010}
+
+/* furniture */
+.runhead{position:absolute;top:22px;left:52px;right:52px;display:flex;justify-content:space-between;
+  font:700 9.5px 'Helvetica Neue',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  text-align:left}
+.pageno{position:absolute;bottom:20px;left:52px;right:52px;display:flex;justify-content:space-between;
+  font:700 10px 'Helvetica Neue',sans-serif;letter-spacing:.18em;color:var(--muted);text-align:left}
+.pageno .rule{flex:1;border-top:1px solid var(--line);margin:6px 14px 0}
+
+/* cover */
+.mastbar{background:var(--red);padding:18px 30px 14px;display:flex;justify-content:space-between;align-items:baseline}
+.mastbar h1{margin:0;color:#fff;font:900 54px/0.95 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:-0.015em;text-align:left}
+.mastbar .issue{color:#fff;font:700 11px 'Helvetica Neue',sans-serif;letter-spacing:.22em;text-transform:uppercase;opacity:.9;text-align:right}
+.coverphoto{position:relative;flex:1;overflow:hidden}
+.coverphoto img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.05) saturate(1.05)}
+.coverlines{position:absolute;left:0;right:0;bottom:0;padding:110px 30px 24px;
+  background:linear-gradient(to top,var(--scrim) 55%,transparent);text-align:left}
+.coverlines .main{color:#fff;font:900 48px/0.98 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:-0.01em;margin:0 0 10px;text-align:left}
+.coverlines .main em{font-style:normal;color:#FF5A5F}
+.coverlines .sub{color:#fff;font:italic 16.5px/1.4 Georgia,serif;margin:0 0 14px;opacity:.95;text-align:left;max-width:620px}
+.coverlines .bullets{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;padding:0;list-style:none}
+.coverlines .bullets li{color:#fff;font:700 11.5px 'Helvetica Neue',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.coverlines .bullets li::before{content:"\25AA  ";color:#FF5A5F}
+.covercredit{background:#101010;color:#8d8d8d;font:10px 'Helvetica Neue',sans-serif;letter-spacing:.16em;
+  text-transform:uppercase;padding:10px 30px 16px;text-align:left}
+.ghost{position:absolute;top:42%;left:50%;transform:translate(-50%,-55%);
+  font:900 400px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-0.05em;
+  color:rgba(204,31,44,.10);-webkit-text-stroke:3px rgba(204,31,44,.6);white-space:nowrap}
+.ghost small{display:block;text-align:center;font:800 20px 'Helvetica Neue',sans-serif;letter-spacing:.4em;
+  color:rgba(250,248,244,.35);-webkit-text-stroke:0;margin-top:28px;text-transform:uppercase;
+  white-space:normal;max-width:660px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* editorial furniture */
+.dept{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+.dept .slug{background:var(--red);color:#fff;font:800 10.5px 'Helvetica Neue',sans-serif;
+  letter-spacing:.2em;text-transform:uppercase;padding:5px 10px 4px}
+.dept .rule{flex:1;height:2px;background:var(--ink)}
+h2.head{font:900 32px/1.02 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:-0.01em;margin:0 0 8px;text-align:left;hyphens:none}
+.deck{font:italic 14.5px/1.4 Georgia,'Times New Roman',serif;color:var(--muted);margin:0 0 6px;text-align:left}
+.byline{font:700 10px 'Helvetica Neue',sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--red);margin:0 0 12px;text-align:left}
+p{margin:0 0 10px;text-align:justify;text-justify:inter-word;hyphens:auto}
+.drop::first-letter{float:left;font:900 44px/0.8 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  padding:6px 7px 0 0;color:var(--red);text-align:left}
+.lead-in{font:800 11.5px 'Helvetica Neue',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+
+/* newspaper columns: flush edges */
+.cols{column-count:2;column-gap:22px;column-rule:1px solid var(--line);
+  text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.cols p{margin-bottom:9px;text-align:justify;text-justify:inter-word;
+  font:12.6px/1.45 'Courier New',Courier,monospace}
+.cols .story-hed{column-span:all;font:900 14px/1.15 'Helvetica Neue',sans-serif;
+  text-transform:uppercase;letter-spacing:.04em;margin:0 0 8px;padding-bottom:4px;
+  border-bottom:2px solid var(--ink);text-align:left;hyphens:none}
+.airwaves{border-top:3px solid var(--ink);border-bottom:1px solid var(--line);padding:8px 0 2px;margin:8px 0 0}
+.airwaves .ep{font:800 10px 'Helvetica Neue',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 6px;text-align:left}
+.airwaves p{font:12.4px/1.42 'Courier New',Courier,monospace;text-align:justify;text-justify:inter-word}
+.cols .break{break-before:column}
+
+.pull{border-top:3px solid var(--red);border-bottom:1px solid var(--line);padding:10px 4px;margin:12px 0;
+  font:italic 15.5px/1.35 Georgia,'Times New Roman',serif;text-align:left;hyphens:none}
+.pull::before{content:"\201C";display:block;font:900 34px/0.4 'Helvetica Neue',sans-serif;color:var(--red);margin-bottom:8px}
+.pull .who{display:block;font:700 9.5px 'Helvetica Neue',sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-style:normal;margin-top:8px}
+.pull.compact{font-size:15px;margin:10px 0;padding:8px 4px}
+
+.box{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);padding:12px 14px;margin:0 0 12px}
+.box h4{font:800 11px 'Helvetica Neue',sans-serif;letter-spacing:.18em;text-transform:uppercase;margin:0 0 6px;color:var(--red);text-align:left}
+.box p{font-size:12.6px;margin-bottom:6px;text-align:justify}
+.colophon{font:9.4px/1.5 'Helvetica Neue',sans-serif;color:var(--muted);border-top:3px solid var(--ink);padding-top:8px;margin-top:auto;text-align:left;hyphens:none}
+.page.dense{font-size:12.8px}
+.page.denser{font-size:12.4px}
+.denser p{margin-bottom:9px}
+.dense p{margin-bottom:9px}
+.dense .byline{margin-bottom:8px}
+.dense h2.head{font-size:28px}
+.dense .deck{font-size:14.5px}
+.dense .pull.compact{padding:8px 4px;margin:8px 0;font-size:14.5px}
+.dense .dept{margin-bottom:8px}
+
+/* wire photos */
+figure.wire{margin:0 0 10px;max-width:100%;text-align:left}
+figure.wire.left{float:left;width:248px;margin:2px 16px 8px 0}
+figure.wire.right{float:right;width:248px;margin:2px 0 8px 16px}
+figure.wire.wide{width:100%;float:none;margin:6px 0 10px}
+figure.wire img{width:100%;display:block;object-fit:contain;object-position:center center;background:#EDEAE3}
+figure.wire.left img,figure.wire.right img{height:200px;object-fit:contain;background:#EDEAE3}
+figure.wire.wide img{height:260px;object-fit:contain;background:#EDEAE3}
+figure.wire.tall img{height:300px;object-fit:contain;background:#EDEAE3}
+figcaption{font:9.5px/1.35 'Courier New',Courier,monospace;color:var(--muted);margin-top:4px;
+  letter-spacing:0;text-transform:none;text-align:left;hyphens:none}
+.coverphoto img.coverfit{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+
+/* photo essay grid */
+.essay{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:8px;margin:4px 0 8px}
+.essay figure{margin:0;background:#EDEAE3;border:1px solid var(--line)}
+.essay figure.span2{grid-column:span 2}
+.essay img{width:100%;height:168px;object-fit:contain;object-position:center center;display:block;background:#EDEAE3}
+.essay figure.span2 img{height:210px}
+.essay figcaption{padding:5px 7px 7px;font-size:9px;line-height:1.3;background:var(--paper)}
+
+/* dual photo row */
+.duorow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 10px}
+.duorow figure{margin:0;background:#EDEAE3;border:1px solid var(--line)}
+.duorow img{width:100%;height:210px;object-fit:contain;object-position:center center;display:block;background:#EDEAE3}
+.duorow figcaption{padding:4px 6px 6px;background:var(--paper)}
+
+/* scoreboard system */
+.gow{background:var(--ink);color:var(--paper);padding:11px 16px 9px;margin:0 0 10px;text-align:left}
+.gow .tag{font:800 10px 'Helvetica Neue',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#FF5A5F;margin:0 0 8px}
+.gow .gow-row{display:grid;grid-template-columns:148px 1fr;gap:12px;align-items:stretch}
+.gow .gow-art{margin:0;background:#0a0908;border:1px solid rgba(250,248,244,.12)}
+.gow .gow-art img{width:100%;height:118px;object-fit:cover;object-position:center 40%;display:block}
+.gow .gow-art figcaption{padding:4px 6px 5px;font:600 8.5px/1.25 'Helvetica Neue',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(250,248,244,.72)}
+.gow .teams{display:flex;align-items:stretch;gap:16px}
+.gow .tm{flex:1}
+.gow .tm .nm{font:800 14px 'Helvetica Neue',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.gow .tm .rec{font:600 9.5px 'Helvetica Neue',sans-serif;letter-spacing:.14em;color:rgba(250,248,244,.6);text-transform:uppercase;margin-top:2px}
+.gow .tm .sc{font:900 36px/1 'Helvetica Neue',sans-serif;font-variant-numeric:tabular-nums;margin-top:4px}
+.gow .tm.loser{opacity:.55}
+.gow .vs{align-self:center;font:800 11px 'Helvetica Neue',sans-serif;color:rgba(250,248,244,.4);letter-spacing:.2em}
+.gow .gamer{font:11.2px/1.35 'Courier New',Courier,monospace;margin:7px 0 0;color:rgba(250,248,244,.92);text-align:justify}
+.sb-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.sb-h{font:800 11px 'Helvetica Neue',sans-serif;letter-spacing:.22em;text-transform:uppercase;
+  border-bottom:2px solid var(--ink);padding-bottom:4px;margin:0 0 6px;color:var(--red);text-align:left}
+.strip{border-bottom:1px solid var(--line);padding:2.2px 0}
+.strip .row{display:flex;justify-content:space-between;font:11.6px 'Helvetica Neue',sans-serif;line-height:1.35;text-align:left}
+.strip .row b{font-weight:800}
+.strip .row .sc{font-variant-numeric:tabular-nums;font-weight:800;font-family:'Courier New',Courier,monospace}
+.strip .row.loser{color:var(--muted)}
+.strip .row.loser .sc{font-weight:600}
+.strip .note{font:italic 9.4px/1.25 Georgia,serif;color:var(--muted);margin-top:1px;text-align:left}
+table.stand{font-size:10.2px;margin:2px 0 0;width:100%;border-collapse:collapse;font-family:'Courier New',Courier,monospace}
+table.stand th{font:800 8.5px 'Helvetica Neue',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink);
+  text-align:left;padding:3px 5px}
+table.stand td{padding:1.4px 5px;border-bottom:1px solid var(--line);text-align:left}
+table.stand td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+table.stand td.rk{color:var(--muted);font-weight:700;width:18px}
+table.stand td.mv{width:14px;text-align:center;color:var(--muted);font-size:9px}
+.wk3{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;margin:0}
+.wk3 p{margin:0 0 3px;font:11px/1.35 'Courier New',Courier,monospace;text-align:left}
+table.stand tr.wc td{background:#F3DF7E;border-bottom:1px solid #E0C95A;font-weight:700}
+table.stand tr.wc td.rk{color:var(--gold);font-weight:800;font-size:9px;letter-spacing:.04em}
+.wcnote{font:italic 9px/1.3 Georgia,serif;color:var(--muted);margin:3px 0 0;text-align:left}
+.sups{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0 0}
+.sup{border:1px solid var(--line);border-top:3px solid var(--red);padding:5px 8px;background:var(--card);text-align:left}
+.sup .k{font:800 8px 'Helvetica Neue',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sup .v{font:900 14px 'Courier New',Courier,monospace;font-variant-numeric:tabular-nums;margin-top:1px}
+.sup .w{font:600 9.5px 'Helvetica Neue',sans-serif;color:var(--muted);margin-top:1px}
+
+/* transactions */
+.timeline{border-left:2px solid var(--line);padding-left:12px;margin-left:2px}
+.timeline .deal{position:relative}
+.timeline .deal::before{content:"";position:absolute;left:-19px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--red)}
+.deal{border:1px solid var(--line);border-top:3px solid var(--red);background:var(--card);padding:7px 11px 6px;margin:0 0 7px}
+.deal .dhead{display:flex;justify-content:space-between;font:800 9.5px 'Helvetica Neue',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;text-align:left}
+.deal .dhead .dt{color:var(--muted)}
+.deal .sides{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.deal .side .tm{font:800 10.5px 'Courier New',Courier,monospace;text-transform:uppercase;margin-bottom:2px;text-align:left;letter-spacing:0}
+.deal .side .pl{font:11px/1.35 'Courier New',Courier,monospace;text-align:justify;text-justify:inter-word;hyphens:auto}
+.deal .cons{font:700 9px 'Courier New',Courier,monospace;letter-spacing:0;text-transform:uppercase;color:var(--muted);margin-top:4px;border-top:1px solid var(--line);padding-top:3px;text-align:left}
+.deal .floor{font:10.4px/1.32 'Courier New',Courier,monospace;margin-top:3px;text-align:justify;text-justify:inter-word;hyphens:auto}
+.deal .floor b{font-family:'Helvetica Neue',sans-serif;font-style:normal;font-weight:800;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase}
+
+.denser .strip .note{font-size:9.2px}
+.denser table.stand{font-size:9.6px}
+.denser .gow .gamer{font-size:10.5px;margin-top:5px}
+.denser .gow{padding:8px 12px 6px;margin-bottom:5px}
+.denser .gow .gow-art img{height:88px}
+.denser .gow .tm .sc{font-size:28px}
+.denser .gow .gow-row{gap:10px;grid-template-columns:128px 1fr}
+.denser .sup{padding:4px 6px}
+.denser .sups{margin-top:4px;gap:6px}
+.denser .colophon{margin-top:4px !important}
+.denser .box p{font-size:12px}
+.denser .deal{padding:7px 10px 6px;margin-bottom:6px}
+.denser .deal .floor{font-size:10.5px}
+.page.desk .deal{padding:4px 9px 3px;margin-bottom:4px}
+.page.desk .deal .floor{font-size:10px;line-height:1.28;margin-top:2px}
+.page.desk .deal .cons{margin-top:2px;padding-top:2px}
+.page.desk .box{margin-top:2px;padding:5px 9px}
+.page.desk .box p{font-size:10.4px;line-height:1.3;margin-bottom:3px}
+.page.desk h2.head{margin-bottom:0}
+.denser .deal .dhead{margin-bottom:4px;font-size:9.2px}
+.denser .timeline{padding-left:11px}
+.denser .box h4{margin-bottom:4px}
+.denser .essay img{height:124px}
+.denser .essay figure.span2 img{height:152px}
+.denser .duorow img{height:168px}
+.denser .airwaves p{font-size:11.6px;line-height:1.38;margin-bottom:7px}
+.denser .airwaves{padding:6px 0 0;margin:4px 0 0}
+.denser .essay{gap:6px;margin:2px 0 6px}
+
 </style>
-</head>
-<body>
-<main class="wrap">
-<p class="kicker">Lana Straw Weekly &#183; Opening the issue</p>
-<h1>The Reign Is 0-2</h1>
-<a class="card" href="magazine.html">
-  <img src="og-image.jpg" width="1200" height="630" alt="Issue cover preview"/>
-</a>
-<p>
-  <a class="btn" href="magazine.html">Open the 9-page issue</a>
-  <a class="btn ghost" href="Lana-Straw-Week2-2026.pdf">Download PDF</a>
-</p>
-<p class="note">If you are not redirected, tap the cover. Week 2 finals, Premier and Champeens.</p>
-</main>
-<script>location.replace("magazine.html");</script>
-</body>
-</html>
+<div class="rack">
+
+<!-- PAGE 1 COVER -->
+<div class="sheet"><div class="page cover">
+  <div class="mastbar">
+    <h1>The Ledger</h1>
+    <div class="issue">Week 2<br>Sept 24, 2026 &#183; Vol. 2026</div>
+  </div>
+  <div class="coverphoto">
+    <img class="coverfit" src="assets/wire_otter.jpg" alt="Handwritten letter to Boom Baum, posted by Otter">
+    <div class="coverlines">
+      <p class="main">0-2.<br>And the notes<br><em>are already in.</em></p>
+      <p class="sub">Eden Banner wrote Boom a letter. Otter posted it Tuesday morning, with the breakfast video. Last in points. The minimum, he had already said, was 45 trades.</p>
+      <ul class="bullets">
+        <li>Was that a real trade?!</li>
+        <li>An NCT by 1.24. Change it NOW.</li>
+        <li>Otter: 2-0 upstairs. Chopped down.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="covercredit">Cover: Eden Banner to Boom Baum &#183; as posted by Otter, Sep 22 &#183; Lana Straw Weekly</div>
+</div></div>
+
+<!-- PAGE 2 BIJAN -->
+<div class="sheet"><div class="page dense denser">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">Week 2</span><span class="rule"></span></div>
+  <h2 class="head" style="font-size:28px;margin-bottom:3px">Was That a Real Trade?!</h2>
+  <p class="deck" style="margin-bottom:3px;font-size:13px">The Kickers n Jigba landed Bijan. The Shiny Hineys left Atlanta. Both clubs woke up 2-0. The poll did not.</p>
+  <p class="byline" style="margin-bottom:5px">The blockbuster &#183; Thursday, Sept. 17</p>
+
+  <div>
+  <figure class="wire right" style="width:248px;margin:0 0 8px 14px">
+    <img src="assets/wire_boom_catch.jpg" alt="A catch, posted by Boom Baum" style="height:188px">
+    <figcaption>Boom Baum, Sept. 18, to the Scott Ramsays: &#8220;congrats on the catch&#8230;. Now trade with me.&#8221; Eight reactions.</figcaption>
+  </figure>
+
+  <p class="drop">Boom Baum asked it at 8:20 p.m. Thursday, in a room that was not the trade channel. &#8220;Holy hell. Was that a real trade?!&#8221; Eleven seconds later, in the trade channel, he answered himself. &#8220;Holy shit.&#8221;</p>
+
+  <p>The Shiny Hineys had paid $69 for Bijan Robinson at the auction, then watched him score 27.3 in a Week 1 win, 93.56 to 90.50 over Backdoor Heat. Thursday night they shipped him. The Kickers n Jigba took Bijan, Chris Olave and Zach Charbonnet. The Hineys walked back with Davante Adams, Javonte Williams, Braelon Allen and Garrett Wilson. The bot forgot a leg. The Hineys did not. &#8220;the bot forgot the $5 FAAB Rob gave me. Really made the trade.&#8221;</p>
+
+  <p>That afternoon the bot had posted S05 EP03, Week 1 Dont Overreact (I&#8217;m Going to Overreact). The guest was the Guy Next Door, who had already failed the assignment on his own Week 1. On the pod he said he had told himself, out loud, more than once, &#8220;I&#8217;m not going to overreact.&#8221; The Bijan deal arrived after the episode. It was not his trade. It followed the title anyway.</p>
+
+  <div class="pull compact" style="margin:6px 0;padding:6px 4px;font-size:14.5px">&#8220;He&#8217;s Gumby. The most durable RB I&#8217;ve ever seen. I&#8217;m also tired of watching Falcon games.&#8221;
+    <span class="who">Shiny Hineys &#183; Thursday, Sept. 17, 8:55 p.m.</span></div>
+
+  <p>Nine minutes after that: &#8220;Fading the reigning MVP is certainly a choice.&#8221; Fart Toot Squeek had already answered, at 8:52 p.m.</p>
+
+  <div class="pull compact" style="margin:6px 0;padding:6px 4px;font-size:14px">&#8220;it feels like your relationship with Bijan is a love/hate thing. That&#8217;s the only way I can make sense of you shipping him away year after year&#8221;
+    <span class="who">Fart Toot Squeek &#183; to the Shiny Hineys &#183; Thursday, Sept. 17, 8:52 p.m.</span></div>
+
+  <p>Boom wanted the same treatment. At 8:37 p.m. he told the Jigba, &#8220;your my new favorite to win it all.&#8221; Friday afternoon he asked the Hineys, &#8220;can you give me all your good players like you did Rob?&#8221;</p>
+
+  <p>Sunday settled the week and left the poll open. No final tally survived. Adams scored 36.5 from the Hineys&#8217; flex. Bijan scored 9.6 in his Jigba debut, started. Charbonnet scored 0.0 on the injured list. Olave scored 18.6. Josh Allen scored 43.82 and Jaxon Smith-Njigba scored 40.0 on the same Jigba roster. The Hineys beat Boom Baum 112.32 to 89.22. The Jigba beat the Scott Ramsays 144.62 to 76.68. Both clubs are 2-0. The Jigba leads the Premier at 324.5 points for. Sunday night the Hineys named the Boom matchup. &#8220;Your weekly pillow fight sponsored by Boom Baum and Shiny Hineys.&#8221;</p>
+  </div>
+  <div class="pageno"><span>2</span><span class="rule"></span><span>WEEK 2</span></div>
+</div></div>
+
+<!-- PAGE 3 LETTER / 45 -->
+<div class="sheet"><div class="page dense denser">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">Week 2</span><span class="rule"></span></div>
+  <h2 class="head" style="font-size:26px;margin-bottom:3px">The Notes Are Already In</h2>
+  <p class="deck" style="margin-bottom:3px;font-size:13px">Boom Baum is 0-2 and last in points. He set the season&#8217;s minimum at 45 trades. Otter&#8217;s daughter answered on paper.</p>
+  <p class="byline" style="margin-bottom:5px">Boom Baum &#183; Otter &#183; Sept. 21 to 22</p>
+
+  <p class="drop">Monday at 3:50 p.m., Boom Baum entered a number. &#8220;I just wanna say the low amount of trades this season is really impacting my mental health. I need to meet a minimum of 45 trades a season for it to be successful.&#8221;</p>
+
+  <p>The Premier log, with the Guy Next Door deal counted once, holds six trades. Four of them have Boom on a side: the draft-weekend swaps with All Gold, No Glory, the Diamond Dogs and Texas Tornado&#8217;s Bush, then Drake London and Dylan Sampson to the Guy Next Door for Caleb Williams and Tetairoa McMillan. After Thursday&#8217;s Bijan deal, the board went quiet on him. Sunday he scored 89.22 and fell to 0-2. Two weeks of points for: 188.0, last in the Premier. Caleb Williams, the quarterback he had just acquired, started and scored 7.22. Tetairoa McMillan scored 13.6. Drake London, now next door, scored 6.9.</p>
+
+  <p>The pod on Thursday had already walked that London deal for a long stretch of the back half. The Guy Next Door had made it off a Week 1 he had promised himself not to chase. Sunday did not vindicate either side in the box score. London scored 6.9. Caleb Williams scored 7.22. The next Premier trade was somebody else&#8217;s.</p>
+
+  <div class="box" style="margin:6px 0;padding:7px 10px">
+    <h4>By the Numbers &#183; Boom Baum</h4>
+    <p style="margin:0;font-size:11.5px">0-2. 188.0 points for, last in the Premier. Six Premier trades in the log, four with his name on a side. The minimum he wrote down is 45. Week 2 score: 89.22. Caleb Williams in the new deal: 7.22.</p>
+  </div>
+
+  <div class="pull compact" style="margin:6px 0;padding:6px 4px;font-size:14.5px">&#8220;My daughter Eden wrote a very sweet, compassionate, and consoling letter to Boom Baum in light of his season starting unfortunately. Here is the letter and him reading it this morning at breakfast.&#8221;
+    <span class="who">Otter &#183; Tuesday, Sept. 22, 8:35 a.m.</span></div>
+
+  <p>The still drew eight reactions. The breakfast clip drew eleven, including the league&#8217;s own loser stamp. Otter&#8217;s Champeens club was 2-0, on 252.8 points, first in that flight. His knockout club was already gone. The Otter is Jackin Goff scored 62.02 in Week 2, last among the clubs still scoring, and left. The letter about an 0-2 season went up the next morning from a franchise that had won one league and been chopped from the other.</p>
+
+  <p>Upstairs, Otter had started both pieces the Premier had just split. Davante Adams scored 36.5 in the flex. Bijan Robinson scored 9.6 at running back, the same 9.6 the Jigba got. Otter beat OKC Schlegstas 112.66 to 90.86. The consolation was for Boom. The week, on Otter&#8217;s other roster, had already ended.</p>
+
+  <p class="story-hed">The catch, and the ask</p>
+
+  <p>Friday, Boom had posted the fish and tagged the Scott Ramsays. &#8220;congrats on the catch&#8230;. Now trade with me.&#8221; Eight reactions. The trade did not come. By press time the Premier log was still those six deals. The minimum on the record is 45. The gap is 39, and the notes were already in.</p>
+  <div class="pageno"><span>3</span><span class="rule"></span><span>WEEK 2</span></div>
+</div></div>
+
+<!-- PAGE 4 KICKER + BREAD -->
+<div class="sheet"><div class="page dense denser">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">Week 2</span><span class="rule"></span></div>
+  <h2 class="head" style="font-size:25px;margin-bottom:3px">The Year That Started Early</h2>
+  <p class="deck" style="margin-bottom:3px;font-size:12.6px">Fart Toot Squeek installed 2027&#8217;s kicker scoring in 2026, said the correction would flip a Champeens game, and then went to 0-2.</p>
+  <p class="byline" style="margin-bottom:4px">The apology &#183; Monday night, Sept. 15</p>
+
+  <div>
+  <figure class="wire left" style="width:210px;margin:0 12px 8px 0">
+    <img src="assets/wire_shippy_laugh.jpg" alt="A baker doubled over a cake" style="height:168px">
+    <figcaption>Change it NOW.</figcaption>
+  </figure>
+
+  <p class="drop">At 9:50 p.m. Monday, Fart Toot Squeek told the whole server. Eight reactions. On Thursday&#8217;s pod the same franchise called it &#8220;the big screw up of updating the kicker scoring.&#8221;</p>
+
+  <div class="box" style="margin:6px 0;padding:7px 10px">
+    <h4>Commissioner&#8217;s Statement</h4>
+    <p style="margin:0;font-size:10.6px;line-height:1.32">&#8220;@everyone I regret to inform y&#8217;all that I&#8217;ve made a grave mistake. For those who aren&#8217;t aware at our Rules Round Table at the draft weekend we voted to change the kicker scoring starting in 2027(decreasing made 40yd+ and 50yd+ FGs by 1pt). I totally forgot about the delayed onset of the rule change and implemented it this season. Y&#8217;all will see it change some scores slightly and much to my chagrin it will flip the outcome of Jerry GM and Dave Ten Haves game. I&#8217;m going to do some push ups, run 10 40s, and keep my head on a swivel so this never happens again. My deepest apologies Lana Straw&#8221;</p>
+    <p style="margin:3px 0 0;font-size:10px;color:var(--muted)">Fart Toot Squeek &#183; Monday, Sept. 15, 9:50 p.m. &#183; 8 reactions</p>
+  </div>
+
+  <p>At 10:01 p.m. Jerry GM + Jerry Owner answered, six reactions behind it. &#8220;We respect your honesty and openness in this difficult time.&#8221;</p>
+
+  <p>The push-ups and the ten 40s were the sentence he gave himself. The season gave him the belt. Week 1 the Jigba had hung 179.86 on him. He answered Tuesday night by sending Jaylen Warren, Rashee Rice and Dallas Goedert to Backdoor Heat for Jaylen Waddle, Colston Loveland and Tyler Allgeier. Sunday, Waddle scored 18.8 in a loss. Loveland scored 0.8. Heat won 119.36 to 78.50. The champion is 0-2, on 215.4 points, one spot and 2.9 points behind the Little Bread Boi, who holds the wild card.</p>
+
+  <p class="story-hed">Change It NOW</p>
+
+  <p>The franchise ESPN listed as Thomas&#8217;s Terrific Team on the Week 1 card is the Scott Ramsays now. Thursday at 10:00 p.m. that club told H Town Holy Rollers it had outscored them. &#8220;I outscored youuuu.&#8221; Twenty-two seconds later: &#8220;I want your name to be &#8216;The Little Bread Boi&#8217;.&#8221; Nine seconds after that: &#8220;Change it NOW.&#8221;</p>
+
+  <p>H Town supplied the margin. &#8220;First week score - 99.54-98.3.&#8221; The match record has those scores: the Scott Ramsays 99.54 in a win over the Guy Next Door, H Town 98.30 in a loss to Texas Tornado&#8217;s Bush. They did not play each other. The difference is 1.24, which H Town also filed as &#8220;&lt;1.5 pts.&#8221; Amburgers asked what the NCT was. That was the answer. The name on the club Sunday was the Little Bread Boi.</p>
+
+  <div class="pull compact" style="margin:6px 0;padding:6px 4px;font-size:14.5px">&#8220;Well, you are the LITTLE bread boi.&#8221;
+    <span class="who">The Scott Ramsays &#183; Thursday, Sept. 17, 10:18 p.m.</span></div>
+
+  <p>Cowboys September Dreams, from the side, offered the bakery its other name. &#8220;ah, a Pain de Boom.&#8221; Sunday, All Gold, No Glory beat the Little Bread Boi 152.14 to 119.98, the high score of either flight. Jared Goff scored 33.78 on the Bread Boi bench. Matthew Stafford started and scored 30.48. Swapping them gets the club to 123.28. All Gold still wins by 28.86. The bench had the better quarterback. It did not have the better team. The bakery is 0-2, holds the wild card at 218.3 points for, and sits ninth by record.</p>
+  </div>
+  <div class="pageno"><span>4</span><span class="rule"></span><span>WEEK 2</span></div>
+</div></div>
+
+<!-- PAGE 5 DESK -->
+<div class="sheet"><div class="page dense denser desk">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">Transactions</span><span class="rule"></span></div>
+  <h2 class="head" style="font-size:26px;margin-bottom:2px">The Desk</h2>
+  <p class="byline" style="margin-bottom:5px">Every deal from the Week 1 issue through press time &#183; one Guy Next Door row, counted once</p>
+
+  <div class="timeline">
+  <div class="deal">
+    <div class="dhead"><span>Mon Sep 14, 8:55 p.m.</span><span class="dt">Premier &#183; logged again at 2:02 a.m.</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">The Guy Next Door receives</div><div class="pl">Drake London &#183; Dylan Sampson</div></div>
+      <div class="side"><div class="tm">Boom Baum receives</div><div class="pl">Caleb Williams &#183; Tetairoa McMillan</div></div>
+    </div>
+    <div class="cons">Cash considerations: none reported &#183; Two log rows, one deal</div>
+    <p class="floor"><b>The floor:</b> the pod spent Thursday&#8217;s back half on it. Sunday: London 6.9, Caleb 7.22, Tetairoa McMillan 13.6. The full scene is page 3.</p>
+  </div>
+  <div class="deal">
+    <div class="dhead"><span>Tue Sep 15, 5:30 p.m.</span><span class="dt">Premier</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">The Kickers n Jigba receive</div><div class="pl">Isaiah Likely</div></div>
+      <div class="side"><div class="tm">Jackin&#8217; Goff receives</div><div class="pl">Kyle Monangai</div></div>
+    </div>
+    <div class="cons">Cash considerations: none reported</div>
+    <p class="floor"><b>The floor:</b> Boom, six minutes later: &#8220;It makes sense for both sides.&#8221; Then: &#8220;Well done. now come back to my office.&#8221; Likely started and scored 5.8. Monangai scored 6.8 on the bench. The Diamond Dogs, in between: &#8220;Someone send me trades.&#8221;</p>
+  </div>
+  <div class="deal">
+    <div class="dhead"><span>Tue Sep 15, 6:39 p.m.</span><span class="dt">Premier</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">Fart Toot Squeek receives</div><div class="pl">Jaylen Waddle &#183; Colston Loveland &#183; Tyler Allgeier</div></div>
+      <div class="side"><div class="tm">Backdoor Heat receives</div><div class="pl">Jaylen Warren &#183; Rashee Rice &#183; Dallas Goedert</div></div>
+    </div>
+    <div class="cons">Cash considerations: none reported</div>
+    <p class="floor"><b>The floor:</b> the trade channel did not answer in words. Sunday the belt paid for the silence, 119.36 to 78.50. Waddle 18.8. Rice 10.3. Goedert 0.9.</p>
+  </div>
+  <div class="deal">
+    <div class="dhead"><span>Thu Sep 17, 8:20 p.m.</span><span class="dt">Premier &#183; the big one</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">The Kickers n Jigba receive</div><div class="pl">Bijan Robinson &#183; Chris Olave &#183; Zach Charbonnet</div></div>
+      <div class="side"><div class="tm">Shiny Hineys receive</div><div class="pl">Davante Adams &#183; Javonte Williams &#183; Braelon Allen &#183; Garrett Wilson</div></div>
+    </div>
+    <div class="cons">Cash considerations: +$5 FAAB to the Hineys, per the Hineys. The bot missed it.</div>
+    <p class="floor"><b>The floor:</b> &#8220;Holy shit,&#8221; eleven seconds later. Who-won poll: no tally in the record. Both clubs 2-0. Adams 36.5. Bijan 9.6. Page 2.</p>
+  </div>
+  <div class="deal">
+    <div class="dhead"><span>Fri Sep 18, 6:58 a.m.</span><span class="dt">Knockout &#183; the log repeated the players Saturday without the cash</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">The Otter is Jackin Goff receives</div><div class="pl">Omarion Hampton</div></div>
+      <div class="side"><div class="tm">Robert&#8217;s Rowdy Team receives</div><div class="pl">Caleb Douglas</div></div>
+    </div>
+    <div class="cons">Cash considerations: +$300 FAAB to Rowdy, on the Friday row</div>
+    <p class="floor"><b>The floor:</b> the Guy Next Door: &#8220;None of the people voting for Otter bid 300 on Hampton except for Otter.&#8221; Otter scored 62.02 and left.</p>
+  </div>
+  <div class="deal">
+    <div class="dhead"><span>Tue Sep 22, 9:52 p.m.</span><span class="dt">Knockout</span></div>
+    <div class="sides">
+      <div class="side"><div class="tm">Boomer Frogs receive</div><div class="pl">Kyle Monangai</div></div>
+      <div class="side"><div class="tm">Michael&#8217;s Magnificent Hiney receives</div><div class="pl">Derrick Henry</div></div>
+    </div>
+    <div class="cons">Cash considerations: none in the trade log</div>
+    <p class="floor"><b>The floor:</b> Cowboys September Dreams asked how much FAAB, &#8220;so I can decide who got fleeced.&#8221; The Hineys answered, &#8220;400.&#8221;</p>
+  </div>
+  </div>
+
+  <div class="box" style="margin-top:4px;padding:6px 10px">
+    <h4>Heard at the Desk</h4>
+    <p style="margin:0 0 3px;font-size:10.6px">Off the log, Champeens, Saturday morning. Amburgers: for $10 FAAB, Cowboys September Dreams would leave the tight end slot empty. The Dreams: &#8220;it&#8217;s either Loveland for 0 points in the TE slot or it&#8217;s no one in the TE slot for 0 points.&#8221; Then, eleven reactions: &#8220;Most importantly, this is just another example of the innovations in fantasy football we can accomplish when we think with our Peen league.&#8221;</p>
+    <p style="margin:0;font-size:10.6px">The wire, in brief: Boomer Frogs $1,000 on Jeremiyah Love; Rowdy $650 on James Cook and $333 on Hampton; JackaWhack $1,000 on Ja&#8217;Marr Chase Wednesday; the Hineys $200 back onto Hampton. No Premier bid rose to a line.</p>
+  </div>
+  <div class="pageno"><span>5</span><span class="rule"></span><span>TRANSACTIONS</span></div>
+</div></div>
+
+<!-- PAGE 6 SCOREBOARD -->
+<div class="sheet"><div class="page dense denser">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">Scoreboard</span><span class="rule"></span></div>
+  <div class="gow">
+    <p class="tag">Game of the Week &#183; The Pillow Fight</p>
+    <div class="gow-row">
+      <figure class="gow-art">
+        <img src="assets/wire_hiney_watermelon.jpg" alt="A watermelon smashed into a face">
+        <figcaption>Exhibit A. The Hineys named it Sunday night.</figcaption>
+      </figure>
+      <div>
+        <div class="teams">
+          <div class="tm"><div class="nm">Shiny Hineys</div><div class="rec">2-0</div><div class="sc">112.32</div></div>
+          <div class="vs">DEF.</div>
+          <div class="tm loser"><div class="nm">Boom Baum</div><div class="rec">0-2</div><div class="sc">89.22</div></div>
+        </div>
+        <p class="gamer">Adams in the flex for 36.5. Bijan, on the other sideline now, scored 9.6 for the Jigba. The argument is on page 2.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sb-grid">
+    <div>
+      <p class="sb-h">Premier &#183; Week 2 finals</p>
+      <div class="strip"><div class="row"><b>All Gold, No Glory</b><span class="sc">152.14</span></div><div class="row loser"><span>The Little Bread Boi</span><span class="sc">119.98</span></div><div class="note">High of either flight. Goff 33.78 rode the bench.</div></div>
+      <div class="strip"><div class="row"><b>The Kickers n Jigba</b><span class="sc">144.62</span></div><div class="row loser"><span>The Scott Ramsays</span><span class="sc">76.68</span></div><div class="note">Allen 43.82, JSN 40.0. Bijan&#8217;s debut: 9.6.</div></div>
+      <div class="strip"><div class="row"><b>Backdoor Heat</b><span class="sc">119.36</span></div><div class="row loser"><span>Fart Toot Squeek</span><span class="sc">78.50</span></div><div class="note">The belt is 0-2. Dak 33.76.</div></div>
+      <div class="strip"><div class="row"><b>Texas Tornado&#8217;s Bush</b><span class="sc">113.38</span></div><div class="row loser"><span>Diamond Dogs</span><span class="sc">90.60</span></div><div class="note">Mahomes 31.98, Chase 23.0. Dogs&#8217; D/ST: 20.</div></div>
+      <div class="strip"><div class="row"><b>Shiny Hineys</b><span class="sc">112.32</span></div><div class="row loser"><span>Boom Baum</span><span class="sc">89.22</span></div><div class="note">The pillow fight. Adams 36.5.</div></div>
+      <div class="strip"><div class="row"><b>The Guy Next Door</b><span class="sc">89.76</span></div><div class="row loser"><span>Jackin&#8217; Goff</span><span class="sc">81.58</span></div><div class="note">Closest Premier game, by 8.18.</div></div>
+      <p class="sb-h" style="margin-top:5px">Standings</p>
+      <table class="stand">
+        <tr><th></th><th></th><th>Team</th><th>W-L</th><th style="text-align:right">PF</th></tr>
+        <tr><td class="rk">1</td><td class="mv">&#8211;</td><td>The Kickers n Jigba</td><td>2-0</td><td class="n">324.5</td></tr>
+        <tr><td class="rk">2</td><td class="mv">&#8211;</td><td>All Gold, No Glory</td><td>2-0</td><td class="n">297.9</td></tr>
+        <tr><td class="rk">3</td><td class="mv">&#8593;</td><td>Texas Tornado&#8217;s Bush</td><td>2-0</td><td class="n">237.4</td></tr>
+        <tr><td class="rk">4</td><td class="mv">&#8593;</td><td>Shiny Hineys</td><td>2-0</td><td class="n">205.9</td></tr>
+        <tr><td class="rk">5</td><td class="mv">&#8595;</td><td>Diamond Dogs</td><td>1-1</td><td class="n">225.5</td></tr>
+        <tr><td class="rk">6</td><td class="mv">&#8593;</td><td>Backdoor Heat</td><td>1-1</td><td class="n">209.9</td></tr>
+        <tr class="wc"><td class="rk">WC</td><td class="mv"></td><td>The Little Bread Boi</td><td>0-2</td><td class="n">218.3</td></tr>
+        <tr><td class="rk">7</td><td class="mv">&#8593;</td><td>The Guy Next Door</td><td>1-1</td><td class="n">181.3</td></tr>
+        <tr><td class="rk">8</td><td class="mv">&#8595;</td><td>The Scott Ramsays</td><td>1-1</td><td class="n">176.2</td></tr>
+        <tr><td class="rk">9</td><td class="mv">&#8593;</td><td>The Little Bread Boi</td><td>0-2</td><td class="n">218.3</td></tr>
+        <tr><td class="rk">10</td><td class="mv">&#8595;</td><td>Fart Toot Squeek</td><td>0-2</td><td class="n">215.4</td></tr>
+        <tr><td class="rk">11</td><td class="mv">&#8595;</td><td>Jackin&#8217; Goff</td><td>0-2</td><td class="n">206.3</td></tr>
+        <tr><td class="rk">12</td><td class="mv">&#8595;</td><td>Boom Baum</td><td>0-2</td><td class="n">188.0</td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="sb-h">Champeens &#183; Week 2 finals</p>
+      <div class="strip"><div class="row"><b>Mac Attack</b><span class="sc">132.98</span></div><div class="row loser"><span>Jerry GM + Jerry Owner</span><span class="sc">107.38</span></div><div class="note">Purdy 30.48, DeVonta 23.7, CMC 20.6.</div></div>
+      <div class="strip"><div class="row"><b>Amburgers</b><span class="sc">122.28</span></div><div class="row loser"><span>Cowboys September Dreams</span><span class="sc">112.72</span></div><div class="note">Allen&#8217;s 43.82 was the best QB line down here. It lost.</div></div>
+      <div class="strip"><div class="row"><b>Chase Is My Leader</b><span class="sc">121.28</span></div><div class="row loser"><span>Prime Lime Time</span><span class="sc">94.38</span></div><div class="note">Dak 33.76 off the bench, Lamb 32.3.</div></div>
+      <div class="strip"><div class="row"><b>Otter</b><span class="sc">112.66</span></div><div class="row loser"><span>OKC Schlegstas</span><span class="sc">90.86</span></div><div class="note">Adams 36.5 and Bijan 9.6, on one roster. 2-0.</div></div>
+      <div class="strip"><div class="row"><b>The Jackal</b><span class="sc">107.50</span></div><div class="row loser"><span>Jordan&#8217;s Trainers</span><span class="sc">82.22</span></div><div class="note">Amon-Ra 31.7.</div></div>
+      <div class="strip"><div class="row"><b>Madison Beer</b><span class="sc">76.10</span></div><div class="row loser"><span>Neaux Gold, All Glory</span><span class="sc">73.52</span></div><div class="note">Closest either flight, by 2.58.</div></div>
+      <p class="sb-h" style="margin-top:5px">Standings</p>
+      <table class="stand">
+        <tr><th></th><th></th><th>Team</th><th>W-L</th><th style="text-align:right">PF</th></tr>
+        <tr><td class="rk">1</td><td class="mv">&#8211;</td><td>Otter</td><td>2-0</td><td class="n">252.8</td></tr>
+        <tr><td class="rk">2</td><td class="mv">&#8593;</td><td>Mac Attack</td><td>2-0</td><td class="n">251.6</td></tr>
+        <tr><td class="rk">3</td><td class="mv">&#8593;</td><td>Amburgers</td><td>2-0</td><td class="n">244.5</td></tr>
+        <tr><td class="rk">4</td><td class="mv">&#8593;</td><td>Madison Beer</td><td>2-0</td><td class="n">171.2</td></tr>
+        <tr><td class="rk">5</td><td class="mv">&#8595;</td><td>Jerry GM + Jerry Owner</td><td>1-1</td><td class="n">242.5</td></tr>
+        <tr><td class="rk">6</td><td class="mv">&#8595;</td><td>Cowboys September Dreams</td><td>1-1</td><td class="n">241.2</td></tr>
+        <tr><td class="rk">7</td><td class="mv">&#8593;</td><td>The Jackal</td><td>1-1</td><td class="n">230.2</td></tr>
+        <tr><td class="rk">8</td><td class="mv">&#8593;</td><td>Chase Is My Leader</td><td>1-1</td><td class="n">216.6</td></tr>
+        <tr><td class="rk">9</td><td class="mv">&#8595;</td><td>Neaux Gold, All Glory</td><td>0-2</td><td class="n">207.0</td></tr>
+        <tr><td class="rk">10</td><td class="mv">&#8595;</td><td>Prime Lime Time</td><td>0-2</td><td class="n">202.2</td></tr>
+        <tr><td class="rk">11</td><td class="mv">&#8211;</td><td>OKC Schlegstas</td><td>0-2</td><td class="n">182.5</td></tr>
+        <tr><td class="rk">12</td><td class="mv">&#8211;</td><td>Jordan&#8217;s Trainers</td><td>0-2</td><td class="n">173.3</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="wcnote" style="margin:2px 0 0">Arrows are movement from the Week 1 record order. Yellow line: the Premier wild card, most points outside the top six by record. The Little Bread Boi holds it at 218.3 while 0-2, ahead of the champion.</p>
+  <div class="sups">
+    <div class="sup"><div class="k">High Score</div><div class="v">152.14</div><div class="w">All Gold, No Glory</div></div>
+    <div class="sup"><div class="k">Low, either flight</div><div class="v">73.52</div><div class="w">Neaux Gold, All Glory</div></div>
+    <div class="sup"><div class="k">Closest</div><div class="v">2.58</div><div class="w">Beer over Neaux Gold</div></div>
+    <div class="sup"><div class="k">Chopped</div><div class="v">62.02</div><div class="w">Otter is Jackin Goff</div></div>
+  </div>
+  <div class="pageno"><span>6</span><span class="rule"></span><span>SCOREBOARD</span></div>
+</div></div>
+
+<!-- PAGE 7 AIRWAVES + POINT AFTER -->
+<div class="sheet"><div class="page dense denser">
+  <div class="runhead"><span>The Lana Straw Ledger</span><span>Week 2 &#183; September 24, 2026</span></div>
+  <div class="dept"><span class="slug">On the Airwaves</span><span class="rule"></span></div>
+  <h2 class="head" style="font-size:24px;margin-bottom:2px">Don&#8217;t Overreact</h2>
+  <p class="deck" style="margin-bottom:2px;font-size:12.6px">S05 EP03 on Thursday, guest the Guy Next Door. S05 EP04 arrived this morning: Hot Starts and Hot Sharts. A note, and no transcript.</p>
+  <p class="byline" style="margin-bottom:4px">The League of Record &#183; Sept. 17, 2026 &#183; guest, the Guy Next Door</p>
+
+  <div>
+  <figure class="wire right" style="width:230px;margin:0 0 8px 12px">
+    <img src="assets/wire_shippy_board.jpg" alt="A whiteboard headed The Scott Ramsays" style="height:148px">
+    <figcaption>The new letterhead. The Little Bread Boi is already on it.</figcaption>
+  </figure>
+
+  <p class="drop">The episode&#8217;s title was a pair of instructions, and the guest reached it in the opening minutes.</p>
+
+  <div class="pull compact" style="margin:6px 0;padding:6px 4px;font-size:14.5px">&#8220;I said out loud to myself multiple times, I&#8217;m not going to overreact.&#8221;
+    <span class="who">The Guy Next Door &#183; on the pod &#183; Sept. 17</span></div>
+
+  <p>He had already made the London deal. The hosts spent the back half walking it: Drake London and Dylan Sampson one way, Caleb Williams and Tetairoa McMillan the other. Fart Toot Squeek, hosting, used the same hour on the kicker. He called the early scoring change the big screw up. Jerry GM + Jerry Owner, in the podcast channel at 11:56 a.m., filed the review before the bot posted the link. &#8220;Episode is electric.&#8221; And, of the guest: &#8220;John&#8217;s brain works in a way that I&#8217;m jealous of. Incredible work on side projects for the league. The magazine and Bot are so so cool.&#8221;</p>
+
+  <p>The bot posted EP03 at 2:30 p.m. The Bijan trade hit at 8:20 p.m.</p>
+
+  <div class="box" style="margin:6px 0;padding:6px 10px">
+    <h4>S05 EP04 &#183; Thursday, Sept. 24, 10:00 a.m.</h4>
+    <p style="margin:0;font-size:11.2px">Hot Starts and Hot Sharts. The bot posted the link. No transcript file had landed, and the episode catalog still ends at S05 EP02 on Sept. 3. The note names Fart Toot Squeek, Amburgers, and a guest, the Kickers n Jigba. It says the hour went at the Bijan deal, the $10 empty tight end, a quiet Premier trade log, and the Bread Bois.</p>
+  </div>
+
+  <p class="story-hed">Knockout, and the card</p>
+
+  <p>Week 2 in the knockout, last place leaves. Glory Burgers 138.32 led the week. Robert&#8217;s Rowdy Team scored 127.08. The Otter is Jackin Goff scored 62.02 and was eliminated. Fart Toot Sneak had already left in Week 1 and scored 0.00. Cowboys September Farts survived on 65.20, 3.18 points ahead of the club that left.</p>
+
+  <div class="box" style="margin:6px 0;padding:6px 10px">
+    <h4>Week 3 card &#183; pairings only, not a final</h4>
+    <div class="wk3">
+      <div>
+        <p><b>Premier.</b> Boom Baum vs Fart Toot Squeek. Jigba vs Guy Next Door. All Gold vs Diamond Dogs. Heat vs the Scott Ramsays. Hineys vs Texas Tornado. Bread Boi vs Jackin&#8217; Goff.</p>
+      </div>
+      <div>
+        <p><b>Champeens.</b> Dreams vs Chase Is My Leader. Prime Lime vs Jerry. Amburgers vs the Jackal. Mac vs Madison Beer. Jordan vs OKC. Neaux Gold vs Otter.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="story-hed">Point After</p>
+  <p>Six Premier trades are in the log. The number Boom wrote down on Monday was 45. Tuesday morning the letter was already on the table.</p>
+  </div>
+
+  <div class="colophon">
+    THE LANA STRAW LEDGER &#183; Week 2, 2026 &#183; Press time Sept. 24. Week 2 finals from the live match record, Premier and Champeens, plus the knockout&#8217;s Week 2 scores. Standings are won-lost from those scores, not from any stored record. The trade log supplied the deals; the Guy Next Door and Boom Baum row is stored twice and counted once, and the knockout&#8217;s Hampton deal is stored twice, cash on the Friday row only. Quotes are as typed on Discord, or as transcribed on the S05 EP03 file. The pod line above is the guest&#8217;s; the transcript&#8217;s host, where he is quoted, is Fart Toot Squeek. Suspect stretches of that file were left out. EP03 is not in the episode catalog. EP04 is the Sept. 24 Discord post only. Times are America/Chicago. Nothing here is a lineup.
+  </div>
+  <div class="pageno"><span>7</span><span class="rule"></span><span>POINT AFTER</span></div>
+</div></div>
+
+</div>
+<script>
+(function(){
+  function fit(){
+    var scale=Math.min(1,(window.innerWidth-24)/816);
+    document.documentElement.style.setProperty('--pagescale', scale);
+  }
+  fit(); window.addEventListener('resize', fit);
+})();
+</script>
