@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=850"/>
 <link rel="icon" href="favicon.ico" sizes="16x16">
 <title>Lana Straw Weekly &#183; Week 2, 2026</title>
 </head>
@@ -1019,6 +1019,27 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
 .banner-q .q { font-size: 30pt; font-weight: 900; font-style: italic; line-height: 1; letter-spacing: -.02em; color: var(--crimson); }
 .banner-q .a { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
 
+/* ---- layout pass 2 ---- */
+.numbers .n-row { align-items: center; padding: 4px 0; grid-template-columns: 1.1in 1fr; }
+.numbers .n-v { font-size: 20pt; }
+.story-grid { align-content: start; }
+.story-grid .story { min-height: 0; }
+.timeline .deal-card { position: relative; }
+.timeline .deal-card::before {
+  content: ""; position: absolute; left: -20px; top: 9px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--crimson);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.timeline { border-left-color: var(--crimson); }
+.closer + .colophon { margin-top: 10px; }
+.timeline { margin-left: 6px; }
+.overheard { border-top: 3px solid var(--ink); padding-top: 7px; }
+.overheard h3 { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7.5pt; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: var(--crimson); margin: 0 0 6px; }
+.overheard .oh-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 .22in; }
+.overheard .oh { border-left: 2px solid var(--gold); padding-left: 10px; }
+.overheard .q { font-style: italic; font-size: 11pt; line-height: 1.3; }
+.overheard .a { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.5pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 5px; }
+
 </style>
 
 <div class="rack">
@@ -1061,7 +1082,7 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
   <div class="page-inner">
     <div class="runhead"><span class="sec">From the Desk</span><span class="iss">Week 2 &#183; September 23, 2026</span></div>
     <div class="flow">
-      <div class="grid-spread row-fill">
+      <div class="grid-spread row-fixed">
         <div>
           <p class="kicker">Editor&#8217;s Letter</p>
           <h1 class="hed" style="font-size:30pt;">We Printed<br/>the Wrong<br/>Winner</h1>
@@ -1102,6 +1123,15 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             <div class="n-row"><div class="n-v">$1,000</div><div class="n-l">Knockout FAAB on Ja&#8217;Marr Chase. <b>Spelled Jamar.</b></div></div>
             <div class="n-row"><div class="n-v">0-2</div><div class="n-l">The champion, <b>and</b> Boom. They play Sunday.</div></div>
           </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="overheard">
+        <h3>Overheard</h3>
+        <div class="oh-row">
+          <div class="oh"><div class="q">Shades of the $100 on Isiah Likely years ago</div><div class="a">Amburgers &#183; Wed 6:50 a.m. &#183; on the knockout bids</div></div>
+          <div class="oh"><div class="q">Fantasy football is a marathon of 17 sprints</div><div class="a">The Guy Next Door &#183; Fri 1:15 p.m. &#183; 5 reactions</div></div>
+          <div class="oh"><div class="q">Going to be some clips emptied for Bryce Young tomorrow morning. / ^^^^^ not a sentence I thought I&#8217;d ever write</div><div class="a">H Town &#183; Tue 6:38 p.m.</div></div>
         </div>
       </div>
     </div>
@@ -1264,12 +1294,12 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
         <p class="kicker">Short Stories</p>
         <h1 class="hed" style="font-size:26pt;">Bread, Burritos and a Bot</h1>
       </div>
-      <div class="story-grid row-fill">
+      <div class="story-grid">
         <div class="story">
           <p class="kicker">The Name</p>
           <h2>Change It NOW</h2>
-          <figure class="wire right" style="width:1.35in;">
-            <img src="assets/wire_shippy_laugh.jpg" alt="AI art of a little baker kneading dough" style="height:1.6in;object-position:center 28%"/>
+          <figure class="wire right" style="width:1.55in;">
+            <img src="assets/wire_shippy_laugh.jpg" alt="AI art of a little baker kneading dough" style="height:2.1in;object-position:center 28%"/>
             <figcaption>Commemorative art. <span class="cred">H Town, Sept. 18</span></figcaption>
           </figure>
           <div class="body">
@@ -1283,7 +1313,7 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
           <p class="kicker">Lunch</p>
           <h2>Ramsayrrito</h2>
           <div class="fig" style="margin-bottom:6px;">
-            <div class="img-frame" style="height:2.05in;"><img src="assets/wire_ramsayrrito.jpg" alt="A burrito with a face, at a taco shop" style="object-position:center 45%"/></div>
+            <div class="img-frame" style="height:2.55in;"><img src="assets/wire_ramsayrrito.jpg" alt="A burrito with a face, at a taco shop" style="object-position:center 45%"/></div>
             <p class="caption">&#8220;What is Thomas eating?&#8221; <span class="cred">Boom Baum &#183; Wednesday, 1:24 p.m.</span></p>
           </div>
           <div class="body">
@@ -1583,6 +1613,7 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
           </div>
         </div>
       </div>
+      <div class="spacer"></div>
       <div class="closer">
         <p class="kicker">Point After</p>
         <h2>0-2 vs. 0-2</h2>

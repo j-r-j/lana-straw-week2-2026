@@ -12,7 +12,7 @@ HEAD = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=850"/>
 <link rel="icon" href="favicon.ico" sizes="16x16">
 <title>Lana Straw Weekly &#183; Week 2, 2026</title>
 </head>
