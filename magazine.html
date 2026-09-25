@@ -1184,6 +1184,16 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
 .vol-grid.ns .vol-tile { height: 1.3in; }
 .vol-grid.ns .vt-cap { font-size: 7.5pt; }
 
+/* ---- photos are fixed-size: nothing stretches to fill leftover space ----
+   Every interior photo needs an explicit height: inline style on .img-frame (or on the img in a
+   figure.wire), or a fixed-size frame class. build.py --check fails the page otherwise. */
+.fig--fill { flex: 0 0 auto; }
+.img-frame, .fig--fill .img-frame { flex: 0 0 auto; min-height: 0; max-height: none; }
+
+/* wild card: the same yellow row in both flights and both table styles */
+table.standings tr.wc td { background: #f3e6b8; border-bottom: 1px solid #e0c95a; font-weight: 700; }
+table.standings tr.wc td:first-child { color: var(--gold); font-weight: 800; }
+
 </style>
 <div class="rack">
 <!-- 01 COVER -->
@@ -1572,7 +1582,7 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             </ul>
           </div>
           <div class="fig fig--fill" style="margin-top:10px;">
-            <div class="img-frame" style="min-height:2in;"><img src="assets/wire_watermelon.jpg" alt="AI art of one man shoving a watermelon into another man's face" style="object-position:center 40%"/></div>
+            <div class="img-frame" style="height:2.00in;"><img src="assets/wire_watermelon.jpg" alt="AI art of one man shoving a watermelon into another man's face" style="object-position:center 40%"/></div>
             <p class="caption">A cold heart, reenacted. <span class="cred">The Guy Next Door &#183; Sept. 21 &#183; 8 reactions</span></p>
           </div>
         </div>
@@ -1741,14 +1751,15 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             <tr><td class="rk">4</td><td class="mv">&#8593;</td><td>Madison Beer</td><td>2-0</td><td class="n">171.2</td></tr>
             <tr><td class="rk">5</td><td class="mv">&#8595;</td><td>Jerry GM + Jerry Owner</td><td>1-1</td><td class="n">242.5</td></tr>
             <tr><td class="rk">6</td><td class="mv">&#8595;</td><td>Cowboys September Dreams</td><td>1-1</td><td class="n">241.2</td></tr>
-            <tr><td class="rk">7</td><td class="mv">&#8593;</td><td>The Jackal</td><td>1-1</td><td class="n">230.2</td></tr>
+            <tr class="wc"><td class="rk">WC</td><td class="mv">&#8593;</td><td>The Jackal</td><td>1-1</td><td class="n">230.2</td></tr>
             <tr><td class="rk">8</td><td class="mv">&#8593;</td><td>Chase Is My Leader</td><td>1-1</td><td class="n">216.6</td></tr>
             <tr><td class="rk">9</td><td class="mv">&#8595;</td><td>Neaux Gold, All Glory</td><td>0-2</td><td class="n">207.0</td></tr>
             <tr><td class="rk">10</td><td class="mv">&#8595;</td><td>Prime Lime Time</td><td>0-2</td><td class="n">202.2</td></tr>
             <tr><td class="rk">11</td><td class="mv">&#8211;</td><td>OKC Schlegstas</td><td>0-2</td><td class="n">182.5</td></tr>
             <tr><td class="rk">12</td><td class="mv">&#8211;</td><td>Jordan&#8217;s Trainers</td><td>0-2</td><td class="n">173.3</td></tr>
           </table>
-          <div class="box" style="margin:10px 0 0;">
+<p class="wcrail">Yellow line: the wild card, most points outside the top six. The Jackal holds it, and is seventh on record anyway.</p>
+          <div class="box" style="margin:6px 0 0;padding:7px 10px;">
             <h4>Week 3 card</h4>
             <p style="font-size:8.6pt;text-align:left;"><b>Premier.</b> Boom Baum vs Fart Toot Squeek. Jigba vs Guy Next Door. All Gold vs Diamond Dogs. Heat vs Ramsays. Hineys vs Texas Tornado. Bread Boi vs Jackin&#8217; Goff.</p>
             <p style="font-size:8.6pt;text-align:left;"><b>Champeens.</b> Dreams vs Chase Is My Leader. Prime Lime vs Jerry. Amburgers vs the Jackal. Mac vs Madison Beer. Jordan vs OKC. Neaux Gold vs Otter.</p>
