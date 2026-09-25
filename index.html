@@ -938,13 +938,95 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
 
 .clearfix::after { content: ""; display: table; clear: both; }
 
+/* ---- Week 2 rebuild: cover rail, numbers panel, letter, travels, story grid ---- */
+.cover-sells.row {
+  top: auto; bottom: 0.56in; left: 0.48in; right: 0.48in; width: auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 14px;
+}
+.cover-sells.row .sell { border-top: 2px solid var(--gold-lite); padding: 6px 0 0; font-size: 8.5pt; }
+.cover.letter .cover-hed-block { bottom: 1.42in; }
+.cover.letter .cover-scrim {
+  background: linear-gradient(to top, rgba(6,8,12,.97) 0%, rgba(6,8,12,.9) 30%, rgba(6,8,12,.35) 52%, rgba(6,8,12,0) 64%, rgba(6,8,12,.55) 100%);
+}
+.cover.letter .cover-hed { font-size: 50pt; }
+
+.numbers { background: var(--ink); color: var(--cream); padding: 12px 14px 8px; }
+.numbers h3 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 7.5pt; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--gold-lite); margin: 0 0 6px;
+}
+.numbers .n-row { display: grid; grid-template-columns: 1.05in 1fr; gap: 10px; align-items: baseline; padding: 5px 0; border-top: 1px solid rgba(243,238,228,.14); }
+.numbers .n-v {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 900; font-size: 22pt;
+  line-height: 1; letter-spacing: -.03em; color: var(--gold); font-variant-numeric: tabular-nums;
+}
+.numbers .n-l { font-size: 8.5pt; line-height: 1.3; font-style: italic; }
+.numbers .n-l b { font-style: normal; color: #fff; }
+
+.letter-note {
+  background: #fdfcf6;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 21px, #cfd8e6 21px, #cfd8e6 22px);
+  border: 1px solid var(--rule); border-left: 3px solid #d98b8b;
+  padding: 8px 14px 6px 18px; margin: 8px 0 10px;
+  font-family: 'Bradley Hand', 'Marker Felt', 'Comic Sans MS', cursive;
+  font-size: 12.5pt; line-height: 22px; color: #1f2d6b;
+}
+.letter-note .sig { display: block; text-align: right; }
+.letter-cap {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.5pt; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: -6px; margin-bottom: 8px;
+}
+
+.travels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 10px 0 12px; position: relative; }
+.travels::before { content: ""; position: absolute; left: 6%; right: 6%; top: 13px; border-top: 2px dashed var(--crimson); }
+.travels .stop { text-align: center; position: relative; padding: 0 4px; }
+.travels .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--crimson); color: #fff; margin: 0 auto 5px; position: relative;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 8pt; font-weight: 900; line-height: 26px; }
+.travels .stop.now .dot { background: var(--gold); color: var(--ink); }
+.travels .d { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.5pt; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--crimson); }
+.travels .w { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 8.5pt; font-weight: 800; margin-top: 2px; }
+.travels .x { font-size: 8pt; font-style: italic; color: var(--muted); line-height: 1.25; margin-top: 2px; }
+
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.16in 0.24in; }
+.story { border-top: 2.5px solid var(--ink); padding-top: 6px; }
+.story .kicker { margin-bottom: 2px; }
+.story h2 { font-size: 16pt; font-weight: 900; line-height: 1.02; letter-spacing: -.015em; margin: 0 0 6px; }
+.story .body { font-size: 9.3pt; line-height: 1.42; }
+.story .body p { margin-bottom: .45em; }
+.story .pull { margin: 6px 0; }
+.story .pull .q { font-size: 11.5pt; }
+
+.review { background: var(--cream); border-top: 3px solid var(--gold); padding: 10px 12px; }
+.review h3 { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7.5pt; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--crimson); margin: 0 0 2px; }
+.review .sub { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.5pt; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.review ul { list-style: none; }
+.review li { font-style: italic; font-size: 9.2pt; line-height: 1.35; padding: 4px 0 4px 12px; border-top: 1px solid var(--rule); position: relative; }
+.review li::before { content: "-"; position: absolute; left: 0; font-style: normal; color: var(--crimson); font-weight: 900; }
+
+.deal-card .side .tm .rcv { color: var(--muted); font-weight: 600; letter-spacing: .08em; }
+.wire-brief { font-size: 8.8pt; line-height: 1.4; border-top: 1px solid var(--rule); padding-top: 6px; margin-top: 6px; }
+.wire-brief b { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; color: var(--crimson); }
+.closer { background: var(--ink); color: var(--cream); padding: 12px 16px; margin-top: 10px; }
+.closer .kicker { color: var(--gold-lite); }
+.closer h2 { font-size: 19pt; font-weight: 900; line-height: 1; margin: 0 0 6px; color: #fff; }
+.closer p { font-size: 9.6pt; line-height: 1.45; margin: 0 0 5px; }
+.closer p:last-child { margin-bottom: 0; }
+.clear { clear: both; }
+.gow .gow-row { grid-template-columns: 2.7in 1fr; }
+.gow .gow-art img { height: auto; object-fit: contain; }
+.banner-q { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 10px 0 8px; text-align: center; }
+.banner-q .q { font-size: 30pt; font-weight: 900; font-style: italic; line-height: 1; letter-spacing: -.02em; color: var(--crimson); }
+.banner-q .a { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
 </style>
+
 <div class="rack">
 
 <!-- 01 COVER -->
-<section class="page cover">
+<section class="page cover letter">
   <div class="cover-art">
-    <img src="assets/wire_otter.jpg" alt="Handwritten letter to Boom Baum, posted by Otter" style="object-position:center 22%"/>
+    <img src="assets/wire_otter.jpg" alt="Handwritten letter to Boom Baum, posted by Otter" style="object-position:center 8%"/>
   </div>
   <div class="cover-scrim"></div>
   <div class="cover-mast">
@@ -957,19 +1039,19 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
       <div class="meta">Sep 23, 2026<br/>Week 2</div>
     </div>
   </div>
-  <div class="cover-sells">
-    <div class="sell"><span class="tag">The Trade</span>Was that a real trade?!</div>
-    <div class="sell"><span class="tag">0-2</span>Boom sets the minimum at 45</div>
-    <div class="sell"><span class="tag">Chop</span>$1,000. All of it. On Ja&#8217;Marr</div>
-    <div class="sell"><span class="tag">The Name</span>An NCT by 1.24. Change it NOW</div>
-  </div>
   <div class="cover-hed-block">
-    <div class="cover-kicker">Eden Banner to Boom Baum &#183; Otter, Sept. 22</div>
-    <div class="cover-hed">0-2.<br/>AND THE NOTES<br/>ARE ALREADY IN.</div>
-    <div class="cover-dek">Eden wrote Boom a letter. Otter posted it Tuesday morning, with video of Boom reading it at breakfast. Boom is 0-2. The minimum, he had already said, was 45 trades.</div>
+    <div class="cover-kicker">Correspondence &#183; Posted by Otter, Sept. 22</div>
+    <div class="cover-hed">MAYBE YOU<br/>SHOULD MAKE<br/>SUME TRADES?</div>
+    <div class="cover-dek">Boom Baum is 0-2 and asked the league for forty-five trades. The league sent him a letter from a child.</div>
+  </div>
+  <div class="cover-sells row">
+    <div class="sell"><span class="tag">#Pointgate</span>The commissioner confesses. Jerry wins a game he lost.</div>
+    <div class="sell"><span class="tag">Bijan</span>Shipped again. &#8220;Was that a real trade?!&#8221;</div>
+    <div class="sell"><span class="tag">Knockout</span>He meant to bid a hundred.</div>
+    <div class="sell"><span class="tag">The Name</span>Lost by 1.24. Now the Little Bread Boi.</div>
   </div>
   <div class="cover-bar">
-    <span>&#8220;My daughter Eden wrote a very sweet, compassionate, and consoling letter&#8230;&#8221;</span>
+    <span>&#8220;I need to meet a minimum of 45 trades a season for it to be successful.&#8221; &#183; Boom Baum</span>
     <span>Week 2 &#183; 2026</span>
   </div>
 </section>
@@ -979,307 +1061,430 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
   <div class="page-inner">
     <div class="runhead"><span class="sec">From the Desk</span><span class="iss">Week 2 &#183; September 23, 2026</span></div>
     <div class="flow">
-      <div class="grid-spread row-fixed">
+      <div class="grid-spread row-fill">
         <div>
           <p class="kicker">Editor&#8217;s Letter</p>
-          <h1 class="hed" style="font-size:28pt;">0-2.<br/>And the notes<br/>are already in.</h1>
-          <p class="dek">Bijan moved again. Boom asked for forty-five trades and got four. The Scott Ramsays bought a name for 1.24 points. Downstairs, Jerry had spent September needling the belt.</p>
-          <div class="body">
-            <p>Thursday night the Shiny Hineys sent Bijan Robinson to the Kickers n Jigba. Boom Baum saw the slip and said the quiet part out loud. The Hineys had paid $69 for him. They had already shipped him once.</p>
-            <p>By Monday Boom was 0-2 on 188.0 points and publishing a season minimum of 45 trades. Tuesday morning Otter posted Eden Banner&#8217;s letter, with video of Boom reading it at breakfast. The letter is the cover.</p>
-            <p>This issue closes Wednesday, Sept. 23, before Thursday. The trades stop at Bijan.</p>
+          <h1 class="hed" style="font-size:30pt;">We Printed<br/>the Wrong<br/>Winner</h1>
+          <p class="dek">The last issue went out ninety-five minutes after the commissioner confessed. It was already wrong. Nobody minded, because one reader wanted it on paper.</p>
+          <div class="body drop">
+            <p>Tuesday, Sept. 15, at 9:50 p.m., Fart Toot Squeek told the Discord he had made &#8220;a grave mistake&#8221; with the kicker scoring, and that fixing it would flip Jerry GM + Jerry Owner&#8217;s game. At 11:25 p.m. the Week 1 issue went out with Jerry losing that game by 0.30. The correction, the confession and a question about the commissioner&#8217;s goatee are on page 4.</p>
+            <p>Jerry read it anyway, the next morning at 6:15.</p>
           </div>
           <div class="pull">
-            <div class="q">&#8220;I need to meet a minimum of 45 trades a season for it to be successful.&#8221;</div>
-            <div class="attr">Boom Baum &#183; Monday, Sept. 21, 3:50 p.m.</div>
+            <div class="q">I wish I had a physical copy to read on the toilet. Might print this bad boy out.</div>
+            <div class="attr">Jerry GM + Jerry Owner &#183; Wednesday, Sept. 16</div>
           </div>
-          <div class="letter-sig">The Straw editors<br/><span class="sans" style="font-size:7pt;font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Compiled Sept. 23, 2026 &#183; CT</span></div>
+          <div class="body">
+            <p>On the pod that Thursday, the Guy Next Door described the dream in full: a season of these, printed, handed out at draft weekend, and a ceremony where &#8220;the winner sits down and gets to sign everybody&#8217;s edition.&#8221;</p>
+            <p>Until then there is this one. Bijan changed teams again. H Town lost his name by 1.24. A knockout manager meant to type a hundred. And Boom Baum asked for forty-five trades, received none, and got mail.</p>
+          </div>
+          <div class="letter-sig">The Straw editors<br/><span class="sans" style="font-size:7pt;font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Closed Wednesday, Sept. 23 &#183; Central time</span></div>
         </div>
         <div>
           <div class="sidebar">
             <h3>Contents</h3>
-            <div class="toc-item"><span><span class="t">Was That a Real Trade?!</span><span class="d">Bijan, again</span></span><span class="p">03</span></div>
-            <div class="toc-item"><span><span class="t">The Minimum Is 45</span><span class="d">Boom at 0-2</span></span><span class="p">04</span></div>
-            <div class="toc-item"><span><span class="t">A Thousand on Ja&#8217;Marr</span><span class="d">Chop + the name</span></span><span class="p">05</span></div>
-            <div class="toc-item"><span><span class="t">Didn&#8217;t Like the Team</span><span class="d">Jerry downstairs</span></span><span class="p">06</span></div>
-            <div class="toc-item"><span><span class="t">The Desk</span><span class="d">Four this week; seven on the season</span></span><span class="p">07&#8211;08</span></div>
-            <div class="toc-item"><span><span class="t">Premier Scoreboard</span><span class="d">Week 2 finals</span></span><span class="p">09</span></div>
-            <div class="toc-item"><span><span class="t">Champeens Scoreboard</span><span class="d">Week 2 finals</span></span><span class="p">10</span></div>
-            <div class="toc-item"><span><span class="t">On the Airwaves</span><span class="d">EP03 + Point After</span></span><span class="p">11</span></div>
-            <hr class="rule"/>
-            <p style="font-size:7pt;color:var(--muted);margin:0;">Scores: ESPN. Trades: the league trade log. Quotes: Discord. Cover: Otter, Sept. 22. Podcast note: S05 EP03 (no transcript in book).</p>
+            <div class="toc-item"><span><span class="t">The Minimum Is 45</span><span class="d">Boom, 0-2, reads his mail</span></span><span class="p">03</span></div>
+            <div class="toc-item"><span><span class="t">A Grave Mistake</span><span class="d">#Pointgate and the goatee</span></span><span class="p">04</span></div>
+            <div class="toc-item"><span><span class="t">Was That a Real Trade?!</span><span class="d">Bijan&#8217;s fourth address</span></span><span class="p">05</span></div>
+            <div class="toc-item"><span><span class="t">Elsewhere in the Discord</span><span class="d">Bread Boi, Ramsayrrito, the bot</span></span><span class="p">06</span></div>
+            <div class="toc-item"><span><span class="t">Double Tap the Zero</span><span class="d">The knockout, and its casualties</span></span><span class="p">07</span></div>
+            <div class="toc-item"><span><span class="t">On the Airwaves</span><span class="d">S05 EP03 &#183; the Guy Next Door</span></span><span class="p">08</span></div>
+            <div class="toc-item"><span><span class="t">The Desk</span><span class="d">Four Premier trades</span></span><span class="p">09</span></div>
+            <div class="toc-item"><span><span class="t">Scoreboards</span><span class="d">Premier, Champeens, Point After</span></span><span class="p">10&#8211;11</span></div>
+          </div>
+          <div class="numbers" style="margin-top:12px;">
+            <h3>The Week in Numbers</h3>
+            <div class="n-row"><div class="n-v">45</div><div class="n-l">Trades a season Boom says he <b>needs</b></div></div>
+            <div class="n-row"><div class="n-v">0</div><div class="n-l">Trades Boom <b>made</b> this week</div></div>
+            <div class="n-row"><div class="n-v">0.30</div><div class="n-l">Margin we printed last week. <b>Wrong winner.</b></div></div>
+            <div class="n-row"><div class="n-v">$69</div><div class="n-l">The Hineys&#8217; price for Bijan, before <b>shipping him</b></div></div>
+            <div class="n-row"><div class="n-v">1.24</div><div class="n-l">Points between H Town and <b>his own name</b></div></div>
+            <div class="n-row"><div class="n-v">$1,000</div><div class="n-l">Knockout FAAB on Ja&#8217;Marr Chase. <b>Spelled Jamar.</b></div></div>
+            <div class="n-row"><div class="n-v">0-2</div><div class="n-l">The champion, <b>and</b> Boom. They play Sunday.</div></div>
           </div>
         </div>
-      </div>
-      <div class="fig fig--fill" style="margin-top:.18in;">
-        <div class="img-frame object-center" style="height:2.4in;">
-          <img src="assets/wire_shippy_board.jpg" alt="Sausage Warrior and Little Baker, posted by H Town"/>
-        </div>
-        <p class="caption">H Town&#8217;s AI name art after the 1.24 loss. Sausage Warrior meets Little Bread Boi. <span class="cred">H Town &#183; Sept. 18 &#183; 12 reactions</span></p>
       </div>
     </div>
     <div class="folio"><span>Lana Straw Weekly &#183; The Straw</span><span class="pg">02</span></div>
   </div>
 </section>
 
-<!-- 03 THE TRADE -->
+<!-- 03 BOOM -->
 <section class="page">
   <div class="page-inner">
-    <div class="runhead"><span class="sec">The Trade</span><span class="iss">Bijan Robinson &#183; Sept. 17</span></div>
+    <div class="runhead"><span class="sec">Cover Story</span><span class="iss">Boom Baum &#183; 0-2</span></div>
     <div class="flow">
       <div class="row-fixed">
-        <p class="kicker">Thursday Night</p>
-        <h1 class="hed" style="font-size:28pt;">Was That a<br/>Real Trade?!</h1>
-        <p class="dek">The Shiny Hineys sent Bijan Robinson to the Kickers n Jigba. They had paid $69 for him. Last August they had already shipped him once.</p>
-        <p class="byline">The Shiny Hineys &#183; The Kickers n Jigba &#183; Sept. 17</p>
+        <p class="kicker">Boom Baum &#183; Sept. 17&#8211;22</p>
+        <h1 class="hed" style="font-size:34pt;">The Minimum Is 45</h1>
+        <p class="dek">Boom came to draft weekend to win it all. Two losses later he was trading with nobody and reading mail at breakfast.</p>
       </div>
-      <div class="body drop clearfix">
-        <p>Thursday at 8:20 p.m. Boom Baum saw the deal and said it out loud. &#8220;Holy hell. Was that a real trade?!&#8221; Eleven seconds later he answered himself. &#8220;Holy shit.&#8221;</p>
-        <p>The Kickers n Jigba took Bijan Robinson, Chris Olave, and Zach Charbonnet. The Shiny Hineys came back with Davante Adams, Javonte Williams, Braelon Allen, and Garrett Wilson. The Hineys had paid $69 for Bijan at the auction.</p>
-        <p>They had done this before. On Aug. 26, 2025, the Hineys shipped Bijan to Boom Baum. On Sept. 12 they took him back.</p>
-        <div class="pull">
-          <div class="q">He&#8217;s Gumby. The most durable RB I&#8217;ve ever seen. I&#8217;m also tired of watching Falcon games.</div>
-          <div class="attr">Shiny Hineys &#183; Thursday, Sept. 17, 8:55 p.m.</div>
-        </div>
-        <div class="pull">
-          <div class="q">it feels like your relationship with Bijan is a love/hate thing. That&#8217;s the only way I can make sense of you shipping him away year after year</div>
-          <div class="attr">Fart Toot Squeek &#183; to the Shiny Hineys &#183; Thursday, Sept. 17, 8:52 p.m.</div>
-        </div>
-        <p>Eight minutes after the deal, the Hineys said the bot had missed a leg. &#8220;the bot forgot the $5 FAAB Rob gave me. Really made the trade&#8221; The slip did not show the $5. That figure is their claim.</p>
-      </div>
-      <div class="box">
-        <h4>Auction price &#183; Bijan Robinson</h4>
-        <p class="big">$69</p>
-        <p>Paid by the Shiny Hineys, 2026. Thursday they sent him to the Jigba with Chris Olave and Zach Charbonnet. Back: Davante Adams, Javonte Williams, Braelon Allen, Garrett Wilson. Cash on the slip: none. The Hineys say $5 FAAB came with him.</p>
-      </div>
-      <div class="spacer"></div>
-    </div>
-    <div class="folio"><span>The Trade &#183; Bijan</span><span class="pg">03</span></div>
-  </div>
-</section>
-
-<!-- 04 BOOM 0-2 -->
-<section class="page">
-  <div class="page-inner">
-    <div class="runhead"><span class="sec">0-2</span><span class="iss">Boom Baum &#183; The Letter</span></div>
-    <div class="flow">
-      <div class="row-fixed">
-        <p class="kicker">Season Minimum</p>
-        <h1 class="hed" style="font-size:26pt;">The Minimum Is 45</h1>
-        <p class="dek">Boom Baum is 0-2, on 188.0 points. The Scott Ramsays are last in points, at 176.2. He set the season&#8217;s minimum at 45 trades.</p>
-        <p class="byline">Boom Baum &#183; Monday, Sept. 21</p>
-      </div>
-      <div class="clearfix">
-        <figure class="wire right" style="width:2.1in;">
-          <img src="assets/wire_boom_catch.jpg" alt="A catch, posted by Boom Baum" style="height:1.85in;object-position:center 42%"/>
-          <figcaption>Boom to the Scott Ramsays, Sept. 18: &#8220;congrats on the catch&#8230;. Now trade with me.&#8221;</figcaption>
+      <div>
+        <figure class="wire right" style="width:2.35in;">
+          <img src="assets/wire_boom_breakfast.jpg" alt="Boom Baum reading the letter at breakfast" style="height:3.3in;object-position:center 40%"/>
+          <figcaption>Tuesday, 8:35 a.m. The reading. <span class="cred">Otter &#183; 11 reactions</span></figcaption>
         </figure>
         <div class="body drop">
-          <p>Monday at 3:50 p.m., Boom Baum put a number on the season. &#8220;I just wanna say the low amount of trades this season is really impacting my mental health. I need to meet a minimum of 45 trades a season for it to be successful.&#8221;</p>
-          <p>By the time Bijan moved, the Premier had made seven trades on the season, and the Guy Next Door deal counts as one. Four of the seven have Boom on a side. This week&#8217;s Desk prints four of those deals; one of them is his. The gap from four to 45 is 41. Sunday he scored 89.22 and fell to 0-2. Two weeks of points: 188.0. The Scott Ramsays have scored the fewest points in the Premier, 176.2.</p>
+          <p>The promise is on the record. Before draft weekend Boom Baum left the pod a voicemail, and on Sept. 17 the hosts finally played it: &#8220;Boom Baum is coming and ready to win it all, baby. Let&#8217;s go.&#8221;</p>
+          <p>The same episode had already looked at his roster. The hosts ran down the worst offenses in football and found Boom holding the only fantasy-relevant players on most of them. &#8220;That&#8217;s a recipe for relegation my friends.&#8221; Somebody predicted the cure: take screenshots of his team now, and by next week it would be &#8220;30 to 40 percent different.&#8221;</p>
+          <p>It was zero percent different. Not for lack of trying. When the Scott Ramsays made a catch on Friday, Boom sent congratulations with terms attached: &#8220;congrats on the catch&#8230;. Now trade with me.&#8221; Nobody did. Sunday the Shiny Hineys beat him 112.32 to 89.22, and on Monday at 3:50 p.m. he filed the grievance.</p>
         </div>
-      </div>
-      <div class="pull" style="margin:8px 0;">
-        <div class="q" style="font-size:11.5pt;">Quote from Scott in the podcast I can&#8217;t believe boom Baum has some of the worst offensive players like Drake London&#8230; fast-forward 10 minutes later I can&#8217;t believe boom traded Drake London&#8230; The boom hatred has already started, and I can&#8217;t wait to shove it in your faces when I win this damn thing.</div>
-        <div class="attr">Boom Baum &#183; Saturday, Sept. 19, 8:39 a.m. &#183; his write-up of the pod; no transcript in the book</div>
-      </div>
-      <div class="box" style="margin:6px 0;">
-        <h4>By the Numbers &#183; Boom Baum</h4>
-        <p style="margin:0;">0-2. 188.0 points for. Last in points: the Scott Ramsays, 176.2. Seven Premier trades on the season through Bijan, four of them his; four this week, one of them his. Minimum 45. Gap 41. Week 2: 89.22.</p>
-      </div>
-      <div class="row-fixed">
-        <p class="kicker">The Letter</p>
-        <h2 class="subhed" style="font-size:14pt;margin-bottom:2px;">Notes, at Breakfast</h2>
-        <p class="byline" style="margin-bottom:6px;">Otter &#183; Tuesday, Sept. 22 &#183; the cover</p>
-        <div class="pull" style="margin:4px 0 6px;">
-          <div class="q" style="font-size:11pt;">My daughter Eden wrote a very sweet, compassionate, and consoling letter to Boom Baum in light of his season starting unfortunately. Here is the letter and him reading it this morning at breakfast.</div>
-          <div class="attr">Otter &#183; Tuesday, Sept. 22, 8:35 a.m.</div>
+        <div class="pull" style="margin:6px 0 8px;">
+          <div class="q">I just wanna say the low amount of trades this season is really impacting my mental health. I need to meet a minimum of 45 trades a season for it to be successful.</div>
+          <div class="attr">Boom Baum &#183; Monday, Sept. 21</div>
         </div>
-        <div class="body"><p style="margin:0;">The letter drew eight. The breakfast video drew eleven. The letter is the cover. Boom was already 0-2.</p></div>
-      </div>
-    </div>
-    <div class="folio"><span>0-2 &#183; Boom Baum</span><span class="pg">04</span></div>
-  </div>
-</section>
-
-<!-- 05 CHOP + NAME -->
-<section class="page">
-  <div class="page-inner">
-    <div class="runhead"><span class="sec">Chop &#183; The Name</span><span class="iss">JackaWhack &#183; Little Bread Boi</span></div>
-    <div class="flow">
-      <div class="row-fixed">
-        <p class="kicker">Knockout Waiver</p>
-        <h1 class="hed" style="font-size:24pt;">A Thousand on Ja&#8217;Marr</h1>
-        <p class="dek">JackaWhack burned the season&#8217;s FAAB on Wednesday. In the Premier that club is the Scott Ramsays.</p>
-        <p class="byline">JackaWhack &#183; Wednesday, Sept. 23</p>
-      </div>
-      <div class="body drop">
-        <p>Wednesday the knockout waiver ran. JackaWhack took Ja&#8217;Marr Chase for $1,000. That was the whole season budget. JackaWhack is the Scott Ramsays. On the Week 1 card the club was still Thomas&#8217;s Terrific Team. It is not the host.</p>
-        <div class="pull" style="margin:6px 0;">
-          <div class="q" style="font-size:12pt;">Nah I already spent all my FAAB on Jamar</div>
-          <div class="attr">The Scott Ramsays &#183; Tuesday, Sept. 22, 9:01 p.m.</div>
-        </div>
-        <p>He said it Tuesday night. The waiver cleared Wednesday. He spelled it Jamar.</p>
-      </div>
-      <hr class="rule-thick" style="margin:8px 0;"/>
-      <div class="row-fixed">
-        <p class="kicker">Name Contest</p>
-        <h1 class="hed" style="font-size:22pt;">Change It NOW</h1>
-        <p class="dek">Thomas&#8217;s Terrific Team won the name. H Town Holy Rollers became the Little Bread Boi. The margin was 1.24, and they did not play each other.</p>
-        <p class="byline">The Scott Ramsays &#183; H Town Holy Rollers &#183; Sept. 17</p>
-      </div>
-      <div class="clearfix">
-        <figure class="wire left" style="width:1.9in;">
-          <img src="assets/wire_shippy_laugh.jpg" alt="Little Baker kneading dough" style="height:1.45in;object-position:center 28%"/>
-          <figcaption>Little Baker, Big Dreams. H Town, Sept. 18.</figcaption>
-        </figure>
         <div class="body">
-          <p>On the Week 1 card the winner was still Thomas&#8217;s Terrific Team. The stake was each club&#8217;s Week 1 starting lineup, the higher score, one week of the name and the logo. They did not play each other.</p>
-          <p>Thursday at 10:00 p.m. the Scott Ramsays told H Town they had the points. &#8220;I outscored youuuu&#8221; Twenty-six seconds later: &#8220;I want your name to be &#8216;The Little Bread Boi&#8217;.&#8221; Nine seconds after that: &#8220;Change it NOW&#8221;</p>
-          <p>H Town wrote the scores. &#8220;First week score - 99.54-98.3.&#8221; Difference 1.24.</p>
+          <p>Relief came Tuesday at 8:35 a.m. Otter posted a letter from his daughter, and video of Boom reading it at breakfast.</p>
         </div>
       </div>
-      <div class="pull" style="margin:6px 0;">
-        <div class="q" style="font-size:12pt;">Well, you are the LITTLE bread boi.</div>
-        <div class="attr">The Scott Ramsays &#183; Thursday, Sept. 17, 10:18 p.m.</div>
-      </div>
-      <div class="box">
-        <h4>The margin &#183; Week 1 starting lineups</h4>
-        <p style="margin:0 0 2px;font:900 20pt/1 Helvetica Neue,Helvetica,Arial,sans-serif;">99.54 &#183; 98.3</p>
-        <p style="margin:0;">Thomas&#8217;s Terrific Team 99.54. H Town Holy Rollers 98.3. Difference 1.24. Sunday the club was the Little Bread Boi.</p>
+      <div class="letter-note">Dear Boom baum, Im sorry you lost two in a row. I feel sad that you lost your game and you are 0-2 and might get relegated from lana Straw premere league Maybe you should make sume trades? <span class="sig">From love Eden Banner, Otter&#8217;s daughter</span></div>
+      <p class="letter-cap">Transcribed as written &#183; the original is the cover</p>
+      <div class="grid-2 row-fixed">
+        <div class="body">
+          <p>Eight minutes later Boom asked the commissioner a procedural question: &#8220;if you got a friend into the league is there a system in place to uninvite them?&#8221;</p>
+          <p>At 9:02 Cowboys September Dreams proposed a telethon: &#8220;a Sarah McLachlan arms of the angel commercial where, instead of sad animals, it&#8217;s sad pictures of Boom and its McLachlan doing a call to action to make trades to help the helpless and vulnerable booms of the league.&#8221;</p>
+        </div>
+        <div class="body">
+          <p>At 9:41 H Town delivered the forecast. ESPN projected Boom ninth.</p>
+          <div class="pull" style="margin:4px 0 6px;">
+            <div class="q" style="font-size:15pt;">I can handle 9th. 9th is good.</div>
+            <div class="attr">Boom Baum &#183; Tuesday, 9:53 a.m.</div>
+          </div>
+          <p>He is twelfth. Sunday he plays the champion, who is also 0-2.</p>
+        </div>
       </div>
       <div class="spacer"></div>
     </div>
-    <div class="folio"><span>Chop &#183; The Name</span><span class="pg">05</span></div>
+    <div class="folio"><span>Cover Story &#183; Boom Baum</span><span class="pg">03</span></div>
   </div>
 </section>
 
-<!-- 06 DOWNSTAIRS -->
+<!-- 04 POINTGATE -->
 <section class="page">
   <div class="page-inner">
-    <div class="runhead"><span class="sec">Downstairs</span><span class="iss">Jerry GM + Jerry Owner &#183; Fart Toot Squeek</span></div>
+    <div class="runhead"><span class="sec">#Pointgate</span><span class="iss">Fart Toot Squeek &#183; Jerry GM + Jerry Owner &#183; Neaux Gold</span></div>
     <div class="flow">
       <div class="row-fixed">
-        <p class="kicker">Downstairs</p>
-        <h1 class="hed" style="font-size:30pt;">Didn&#8217;t Like<br/>the Team</h1>
-        <p class="dek">Jerry GM + Jerry Owner, in the Champeens, spent the open of September on Fart Toot Squeek.</p>
-        <p class="byline">Jerry GM + Jerry Owner &#183; Fart Toot Squeek &#183; Sept. 3 and Sept. 13</p>
+        <p class="kicker">The Commissioner&#8217;s Office</p>
+        <h1 class="hed" style="font-size:34pt;">A Grave Mistake</h1>
+        <p class="dek">The league voted to shave a point off long field goals in 2027. The commissioner started in 2026, took it back, and handed a win to the fastest arch-nemesis he has ever had.</p>
       </div>
-      <div class="body drop">
-        <p>Fart Toot Squeek keeps the Premier club. He also has Mac Attack in the Champeens. Jerry GM + Jerry Owner plays downstairs, and he has been listening to the host look at that roster.</p>
+      <div>
+        <figure class="wire left" style="width:2.3in;">
+          <img src="assets/wire_hiney_kick.jpg" alt="A kicker lines up a 52-yard field goal at a football with a face" style="height:2.7in;object-position:center 30%"/>
+          <figcaption>Fifty-two yards. Full price until 2027. <span class="cred">Shiny Hineys &#183; Monday, Sept. 21</span></figcaption>
+        </figure>
+        <div class="body drop">
+          <p>At the draft weekend Rules Round Table the league agreed to trim the 40- and 50-yard field goals by a point, starting next season. Fart Toot Squeek, commissioner and reigning champion, turned it on this season instead. Tuesday night at 9:50 he came clean to everyone at once.</p>
+        </div>
+        <div class="pull" style="margin:6px 0;overflow:hidden;">
+          <div class="q" style="font-size:11pt;">I totally forgot about the delayed onset of the rule change and implemented it this season. Y&#8217;all will see it change some scores slightly and much to my chagrin it will flip the outcome of Jerry GM and Dave Ten Haves game. I&#8217;m going to do some push ups, run 10 40s, and keep my head on a swivel so this never happens again. My deepest apologies Lana Straw</div>
+          <div class="attr">Fart Toot Squeek &#183; Tuesday, Sept. 15, 9:50 p.m. &#183; 8 reactions</div>
+        </div>
       </div>
-      <div class="pull" style="margin:28px 0;">
-        <div class="q" style="font-size:20pt;">Listening to Scott implode looking at my team is *chefs kiss*</div>
-        <div class="attr">Jerry GM + Jerry Owner &#183; Thursday, Sept. 3, 9:16 a.m.</div>
+      <div class="clear"></div>
+      <div class="grid-2 row-fixed">
+        <div class="body">
+          <p>The loser had already filed. Eight minutes before the apology, Neaux Gold, All Glory: &#8220;I was the West Michigan of week 1.&#8221;</p>
+          <p>Eleven minutes after it, the winner issued a statement. &#8220;We respect your honesty and openness in this difficult time.&#8221; Six reactions. The commissioner answered with a gif of Toby from <i>The Office</i>.</p>
+          <p>On the pod Thursday the commissioner called it the &#8220;worst mistake I&#8217;ve ever made as a commissioner.&#8221; Jerry had sent in a voicemail before the ruling, arguing that &#8220;what really separates the men from the boys are the adjustments.&#8221;</p>
+        </div>
+        <div class="body">
+          <p>Wednesday night Jerry opened a second front.</p>
+          <div class="pull" style="margin:4px 0 6px;">
+            <div class="q" style="font-size:11.5pt;">Did [the commissioner] shave a goatee just for the stone cold bit at draft weekend or is he walking around austin like that? I see Scott two days a year so I have no reference. Can he go within 100 yards of a school?</div>
+            <div class="attr">Jerry GM + Jerry Owner &#183; Wednesday, Sept. 16, 8:58 p.m.</div>
+          </div>
+          <p>One minute later: &#8220;I&#8217;m asking, respectfully.&#8221; Six reactions. On the pod the commissioner called Jerry &#8220;the fastest arch nemesis I&#8217;ve ever experienced,&#8221; then spoke to him directly.</p>
+        </div>
       </div>
-      <div class="pull" style="margin:28px 0;">
-        <div class="q" style="font-size:18pt;">I&#8217;m on track to score more points than any other team in the peen league but Scott diDnT LiKe mY tEam</div>
-        <div class="attr">Jerry GM + Jerry Owner &#183; Sunday, Sept. 13, 8:26 p.m.</div>
+      <div class="pull" style="margin:6px 0;border-left-color:var(--gold);">
+        <div class="q" style="font-size:14pt;">You come at the champ, you best not miss, you know, Stone Cold part two is coming for you and I&#8217;ve got the mic, bitch.</div>
+        <div class="attr">Fart Toot Squeek &#183; S05 EP03 &#183; Sept. 17</div>
       </div>
-      <div class="box">
-        <h4>The two flights</h4>
-        <p>Premier: Fart Toot Squeek. The Scott in these lines is that club, and the host.</p>
-        <p style="margin:0;">Champeens: Jerry GM + Jerry Owner. Mac Attack is the host&#8217;s other club, downstairs.</p>
+      <div class="box" style="margin:4px 0 0;">
+        <h4>The ruling, enforced</h4>
+        <p>The pod filed #Pointgate next to #RamsayGate, the league&#8217;s standing theory that the scoreboard bends toward the Ramsays. For once it bent the other way, toward the man asking about schools. The appeal was heard Sunday, downstairs, by the commissioner&#8217;s other club. Mac Attack 132.98, Jerry 107.38.</p>
       </div>
       <div class="spacer"></div>
     </div>
-    <div class="folio"><span>Downstairs &#183; Jerry</span><span class="pg">06</span></div>
+    <div class="folio"><span>#Pointgate</span><span class="pg">04</span></div>
   </div>
 </section>
 
-<!-- 07 TRANSACTIONS A -->
+<!-- 05 BIJAN -->
 <section class="page">
   <div class="page-inner">
-    <div class="runhead"><span class="sec">Transactions</span><span class="iss">The Desk &#183; Premier through Bijan</span></div>
-    <div class="flow dense">
+    <div class="runhead"><span class="sec">The Trade</span><span class="iss">Bijan Robinson &#183; Thursday, Sept. 17</span></div>
+    <div class="flow">
+      <div class="row-fixed">
+        <p class="kicker">Thursday Night, 8:20 p.m.</p>
+        <h1 class="hed" style="font-size:38pt;">Was That a<br/>Real Trade?!</h1>
+        <p class="dek">The Shiny Hineys paid $69 for Bijan Robinson in August. Three weeks into the season he was a Jigba. It was not the first time the Hineys let him go.</p>
+      </div>
+      <div class="travels">
+        <div class="stop"><div class="dot">1</div><div class="d">Aug. 26, 2025</div><div class="w">To Boom Baum</div><div class="x">The Hineys ship him out.</div></div>
+        <div class="stop"><div class="dot">2</div><div class="d">Sept. 12, 2025</div><div class="w">Back to the Hineys</div><div class="x">Seventeen days away.</div></div>
+        <div class="stop"><div class="dot">3</div><div class="d">Auction, 2026</div><div class="w">Hineys, $69</div><div class="x">Paid at the auction.</div></div>
+        <div class="stop now"><div class="dot">4</div><div class="d">Sept. 17, 2026</div><div class="w">To the Jigba</div><div class="x">Week 2: 9.6 points.</div></div>
+      </div>
+      <div class="two-col body drop">
+        <p>Thursday at 8:20 p.m. the slip hit the Discord and Boom Baum, a man who has been posting &#8220;Anyone want to trade? I am bored&#8221; since August, watched two other clubs make one. &#8220;Holy hell. Was that a real trade?!&#8221; Eleven seconds later he answered himself. &#8220;Holy shit.&#8221;</p>
+        <p>The Kickers n Jigba took Bijan Robinson, Chris Olave and Zach Charbonnet. The Shiny Hineys took back Davante Adams, Javonte Williams, Braelon Allen and Garrett Wilson. Both clubs were 2-0 by Monday.</p>
+        <p>The commissioner saw a pattern and said so.</p>
+        <div class="pull">
+          <div class="q" style="font-size:12pt;">it feels like your relationship with Bijan is a love/hate thing. That&#8217;s the only way I can make sense of you shipping him away year after year</div>
+          <div class="attr">Fart Toot Squeek &#183; 8:52 p.m.</div>
+        </div>
+        <p>The Hineys had a scouting report ready, and a second reason nobody expected.</p>
+        <div class="pull">
+          <div class="q" style="font-size:12pt;">He&#8217;s Gumby. The most durable RB I&#8217;ve ever seen. I&#8217;m also tired of watching Falcon games.</div>
+          <div class="attr">Shiny Hineys &#183; 8:55 p.m.</div>
+        </div>
+        <p>Eight minutes after the deal the Hineys added a footnote the bot never printed: &#8220;the bot forgot the $5 FAAB Rob gave me. Really made the trade&#8221;. The Straw has no receipt for the five dollars. The Hineys have their word.</p>
+        <p>Sunday settled nothing and embarrassed everyone a little. Adams, three days a Hiney, scored 36.5 in the flex against Boom. Bijan, three days a Jigba, scored 9.6 against the Ramsays. The Jigba won anyway, 144.62 to 76.68, and sit first in the Premier.</p>
+        <p>The Jigba is a Ramsay club. Readers who keep a #RamsayGate file may add a page.</p>
+      </div>
+      <div class="spacer"></div>
+      <div class="banner-q">
+        <div class="q">&#8220;Holy hell.<br/>Was that a real trade?!&#8221;</div>
+        <div class="a">Boom Baum &#183; 8:20 p.m. &#183; eleven seconds before &#8220;Holy shit.&#8221;</div>
+      </div>
+    </div>
+    <div class="folio"><span>The Trade &#183; Bijan</span><span class="pg">05</span></div>
+  </div>
+</section>
+
+<!-- 06 SHORT STORIES -->
+<section class="page">
+  <div class="page-inner">
+    <div class="runhead"><span class="sec">Elsewhere in the Discord</span><span class="iss">Sept. 17&#8211;23</span></div>
+    <div class="flow">
+      <div class="row-fixed">
+        <p class="kicker">Short Stories</p>
+        <h1 class="hed" style="font-size:26pt;">Bread, Burritos and a Bot</h1>
+      </div>
+      <div class="story-grid row-fill">
+        <div class="story">
+          <p class="kicker">The Name</p>
+          <h2>Change It NOW</h2>
+          <figure class="wire right" style="width:1.35in;">
+            <img src="assets/wire_shippy_laugh.jpg" alt="AI art of a little baker kneading dough" style="height:1.6in;object-position:center 28%"/>
+            <figcaption>Commemorative art. <span class="cred">H Town, Sept. 18</span></figcaption>
+          </figure>
+          <div class="body">
+            <p>The bet was one week of the loser&#8217;s name, decided on Week 1 starting lineups. The Scott Ramsays had 99.54. H Town had 98.3. They did not even play each other.</p>
+            <p>Thursday at 10:00 p.m. the Ramsays named the price: &#8220;I want your name to be &#8216;The Little Bread Boi&#8217;.&#8221; Nine seconds later: &#8220;Change it NOW&#8221;. Then a clarification.</p>
+          </div>
+          <div class="pull"><div class="q">Well, you are the LITTLE bread boi.</div><div class="attr">The Scott Ramsays &#183; 10:18 p.m.</div></div>
+          <div class="body"><p>The next morning H Town posted the AI art himself. The Little Bread Boi went 0-2 and still holds the Premier wild card.</p></div>
+        </div>
+        <div class="story">
+          <p class="kicker">Lunch</p>
+          <h2>Ramsayrrito</h2>
+          <div class="fig" style="margin-bottom:6px;">
+            <div class="img-frame" style="height:2.05in;"><img src="assets/wire_ramsayrrito.jpg" alt="A burrito with a face, at a taco shop" style="object-position:center 45%"/></div>
+            <p class="caption">&#8220;What is Thomas eating?&#8221; <span class="cred">Boom Baum &#183; Wednesday, 1:24 p.m.</span></p>
+          </div>
+          <div class="body">
+            <p>Wednesday was a Lana Straw taco outing, per Jackin&#8217; Goff. Boom posted the evidence with a face on the burrito and one question. The Ramsays answered in one word: &#8220;Ramsayrrito.&#8221; The Kickers n Jigba asked the subjects a follow-up: &#8220;How does it make yall feel when AI changes your faces like that?&#8221; No one answered.</p>
+          </div>
+        </div>
+        <div class="story">
+          <p class="kicker">The Bot</p>
+          <h2>Destroying Families</h2>
+          <div class="body">
+            <p>At 1:23 p.m. Wednesday the Shiny Hineys gave the league&#8217;s bot its standing orders: &#8220;Make sure to give Boom Baum terrible advice&#8221;. At 1:29 the commissioner asked it a family question: &#8220;who&#8217;s the best manager between the Ramsay Brothers over the history of the Lana Straw league?&#8221;</p>
+            <p>The answer arrived and so did the commissioner&#8217;s feelings. &#8220;I think I love you.&#8221; Cowboys September Dreams quoted the verdict for the rest of the house.</p>
+          </div>
+          <div class="pull"><div class="q">&#8220;Same hardware as Jonathan, but he actually scores and wins in the regular season&#8221; - Lana Straw Bot destroying families</div><div class="attr">Cowboys September Dreams &#183; 2:36 p.m. &#183; 6 reactions</div></div>
+        </div>
+        <div class="story">
+          <p class="kicker">Champeens</p>
+          <h2>The Worst Day of the Week</h2>
+          <div class="body">
+            <p>The Jackal, who went 1-1 and beat Jordan&#8217;s Trainers by 25 on Sunday, filed the week&#8217;s most honest review of the NFL on Tuesday evening.</p>
+          </div>
+          <div class="pull"><div class="q">The worst part of the football season is Tuesdays. I can only hear about how Caleb Williams cried too much so many times.</div><div class="attr">The Jackal &#183; Tuesday, Sept. 22, 6:34 p.m.</div></div>
+          <div class="body">
+            <p>Amburgers spent Tuesday morning on public works, announcing live scoring for whichever Lana league you are not in, straight to your phone. The Guy Next Door built it. Nobody has to open a browser to watch the Premier suffer anymore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="folio"><span>Elsewhere in the Discord</span><span class="pg">06</span></div>
+  </div>
+</section>
+
+<!-- 07 KNOCKOUT -->
+<section class="page">
+  <div class="page-inner">
+    <div class="runhead"><span class="sec">The Knockout</span><span class="iss">Lana Straw Knockout &#183; Weeks 1&#8211;2</span></div>
+    <div class="flow">
+      <div class="row-fixed">
+        <p class="kicker">Last Place Leaves</p>
+        <h1 class="hed" style="font-size:34pt;">Double Tap the Zero</h1>
+        <p class="dek">The new knockout league hands every club a season&#8217;s budget and one warning. Two managers spent it in a day. One of them meant to.</p>
+      </div>
+      <div class="two-col body drop">
+        <p>The warning was not complicated. H Town had even read up on it: &#8220;I did like read like an article or two and said like hey don&#8217;t spend all your money in the first week okay cool&#8221;. Then he opened the waiver screen to bid a hundred on Jeremiyah Love.</p>
+        <div class="pull"><div class="q" style="font-size:13pt;">I put it a hundred and I just double tap the zero</div><div class="attr">H Town &#183; on the pod &#183; Sept. 17</div></div>
+        <p>The box was too narrow to show the extra zero. It showed up on the wire instead, as the whole budget. That evening the Shiny Hineys, catching up on the episode, reported their relief: &#8220;I thought someone just really liked what they saw from Jeremiah Love.&#8221;</p>
+        <p>The Kickers n Jigba, playing the knockout as Robert&#8217;s Rowdy Team, did it on purpose. $650 on James Cook and $333 on Omarion Hampton, and at 7:31 Wednesday morning a full disclosure: &#8220;I blew my whole wad&#8221;. The Hineys: &#8220;Robert is a waiver hog&#8221;. The Guy Next Door: &#8220;None of my 10 dollar bids went through. WTF!&#8221; A minute later Boom Baum asked the room a question that told you everything about his week: &#8220;What&#8217;s a chop league?&#8221;</p>
+        <p>The Jigba got some of it back. Friday Rowdy flipped Hampton to the Otter is Jackin Goff for Caleb Douglas and $300. The Guy Next Door reviewed the voting: &#8220;None of the people voting for Otter bid 300 on Hampton except for Otter.&#8221; Sunday the Otter is Jackin Goff scored 62.02, the low score, and was eliminated.</p>
+        <p>They were the second club out. The first, in Week 1, was the commissioner&#8217;s, Fart Toot Sneak, at 86.9. Cowboys September Farts survived Week 2 on 65.20, 3.18 points clear of the exit.</p>
+        <p>Then on Wednesday the Scott Ramsays&#8217; club, JackaWhack, put $1,000 on Ja&#8217;Marr Chase, all of it, and announced it the night before in their own spelling.</p>
+        <div class="pull"><div class="q" style="font-size:13pt;">Nah I already spent all my FAAB on Jamar</div><div class="attr">The Scott Ramsays &#183; Tuesday, Sept. 22, 9:01 p.m.</div></div>
+      </div>
+      <h2 class="subhed" style="font-size:11pt;margin-top:6px;">Knockout deals</h2>
+      <div class="timeline">
+        <div class="deal-card" style="margin-bottom:6px;">
+          <div class="dhead"><span>Fri, Sept. 18 &#183; 6:58 a.m.</span><span class="dt">Written twice by the bot; the Friday row carries the cash</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">The Otter is Jackin Goff <span class="rcv">receives</span></div><div class="pl">Omarion Hampton</div></div>
+            <div class="side"><div class="tm">Robert&#8217;s Rowdy Team <span class="rcv">receives</span></div><div class="pl">Caleb Douglas, $300 FAAB</div></div>
+          </div>
+        </div>
+        <div class="deal-card">
+          <div class="dhead"><span>Tue, Sept. 22 &#183; 9:52 p.m.</span><span class="dt">400 FAAB per the Hiney in the channel; not on the slip</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">Boomer Frogs <span class="rcv">receives</span></div><div class="pl">Kyle Monangai</div></div>
+            <div class="side"><div class="tm">Michael&#8217;s Magnificent Hiney <span class="rcv">receives</span></div><div class="pl">Derrick Henry</div></div>
+          </div>
+          <div class="floor"><b>The floor</b> &#183; Cowboys September Dreams asked how much FAAB, &#8220;so I can decide who got fleeced.&#8221; The Hiney: &#8220;400.&#8221;</div>
+        </div>
+      </div>
+      <p class="wire-brief"><b>The wire, in brief</b> &#183; Boomer Frogs $1,000 on Jeremiyah Love. Rowdy $650 on Cook, $333 on Hampton. JackaWhack $1,000 on Ja&#8217;Marr Chase. The Hineys $200 back onto Hampton. The Premier wire spent nothing.</p>
+      <div class="spacer"></div>
+    </div>
+    <div class="folio"><span>The Knockout</span><span class="pg">07</span></div>
+  </div>
+</section>
+
+<!-- 08 AIRWAVES -->
+<section class="page">
+  <div class="page-inner">
+    <div class="runhead"><span class="sec">On the Airwaves</span><span class="iss">S05 EP03 &#183; Don&#8217;t Overreact (I&#8217;m Going to Overreact) &#183; Sept. 17</span></div>
+    <div class="flow">
+      <div class="row-fixed">
+        <p class="kicker">The Guest &#183; The Guy Next Door</p>
+        <h1 class="hed" style="font-size:32pt;">I&#8217;m Not Going<br/>to Overreact</h1>
+        <p class="dek">Week 1 gave the Guy Next Door one quarterback touchdown and nothing else. He went on the pod to explain what he did about it the next morning.</p>
+      </div>
+      <div class="grid-spread row-fill">
+        <div>
+          <div class="body drop">
+            <p>The pod&#8217;s guest this week is in his fourth season and says he has heard every episode. He spent his Week 1 on the couch with three kids, a laptop and a phone, watching a team that scored, in the hosts&#8217; summary, &#8220;basically no touchdowns whatsoever from your entire team except for your quarterback.&#8221;</p>
+          </div>
+          <div class="pull"><div class="q" style="font-size:14pt;">I said out loud to myself multiple times, I&#8217;m not going to overreact. And then I immediately, I&#8217;m like, the next morning, I&#8217;m like, I got to do something.</div><div class="attr">The Guy Next Door &#183; S05 EP03</div></div>
+          <div class="body">
+            <p>Something was Drake London. Monday night he sent Caleb Williams and Tetairoa McMillan to Boom Baum and took London and Dylan Sampson. On air he called it a bet against the Panthers throwing forever and on London&#8217;s quarterback coming back. The hosts recalled the trade poll splitting almost exactly in half.</p>
+            <p>Sunday London scored 6.9. Caleb scored 7.22 and McMillan 13.6, both for Boom, who lost anyway. The Guy Next Door beat Jackin&#8217; Goff 89.76 to 81.58, the closest game in the Premier.</p>
+            <p>The episode ended back at draft weekend. The watermelon contest, the Guy Next Door said, came down to &#8220;just raw competition,&#8221; and a technique he had studied on YouTube. Four days later he posted the dramatization at right.</p>
+          </div>
+          <div class="box" style="margin-top:8px;">
+            <h4>Also on the episode</h4>
+            <p style="text-align:left;">Boom&#8217;s preseason voicemail, page 3. The commissioner on #Pointgate, page 4. H Town and the extra zero, page 7. A rumor about John Madden and hotel hand towels, which the Straw will not be printing.</p>
+          </div>
+        </div>
+        <div class="rail">
+          <div class="review">
+            <h3>Jerry Reviews the Pod</h3>
+            <div class="sub">Jerry GM + Jerry Owner &#183; Sept. 17, 11:56 a.m. &#183; as posted</div>
+            <ul>
+              <li>Episode is electric.</li>
+              <li>I was fully prepared for either outcome, although obviously I benefit from this one.</li>
+              <li>Chop league is a great addition</li>
+              <li>Scott saying &#8220;oh no&#8221; hearing about John madden wiping with hand towels</li>
+              <li>John&#8217;s watermelon shoving. What doesn&#8217;t translate is how intense and casual John was all at the same time. A cold heart</li>
+            </ul>
+          </div>
+          <div class="fig fig--fill" style="margin-top:10px;">
+            <div class="img-frame" style="min-height:2in;"><img src="assets/wire_watermelon.jpg" alt="AI art of one man shoving a watermelon into another man's face" style="object-position:center 40%"/></div>
+            <p class="caption">A cold heart, reenacted. <span class="cred">The Guy Next Door &#183; Sept. 21 &#183; 8 reactions</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="folio"><span>On the Airwaves &#183; S05 EP03</span><span class="pg">08</span></div>
+  </div>
+</section>
+
+<!-- 09 DESK -->
+<section class="page">
+  <div class="page-inner">
+    <div class="runhead"><span class="sec">Transactions</span><span class="iss">The Desk &#183; Premier &#183; Sept. 14&#8211;17</span></div>
+    <div class="flow">
       <div class="row-fixed">
         <p class="kicker">The Desk</p>
-        <h1 class="hed" style="font-size:26pt;">Keep the Floor<br/>Talking</h1>
-        <p class="dek">Seven Premier trades on the season through Bijan, Sept. 17. Four this week on the Desk. The Guy Next Door deal is one deal, written down twice.</p>
-        <p class="byline">Premier &#183; Sept. 14&#8211;17</p>
+        <h1 class="hed" style="font-size:30pt;">Four Deals in Four Days</h1>
+        <p class="dek">The Premier traded four times in four days, then stopped. Boom Baum was on the first deal and in the audience for the other three.</p>
       </div>
-      <div class="deal"><div class="num">01</div><div class="card">
-        <div class="when">Premier &#183; Mon Sep 14, 8:55 p.m. &#183; written again 2:02 a.m.</div>
-        <div class="teams">The Guy Next Door / Boom Baum</div>
-        <div class="legs">The Guy Next Door received <strong>Drake London, Dylan Sampson</strong>. Boom received <strong>Caleb Williams, Tetairoa McMillan</strong>. Cash: none. Floor: one deal, counted once. Sunday: London 6.9, Caleb 7.22, Tetairoa 13.6.</div>
-      </div></div>
-      <div class="deal"><div class="num">02</div><div class="card">
-        <div class="when">Premier &#183; Tue Sep 15, 5:30 p.m.</div>
-        <div class="teams">The Kickers n Jigba / Jackin&#8217; Goff</div>
-        <div class="legs">Jigba received <strong>Isaiah Likely</strong>. Goff received <strong>Kyle Monangai</strong>. Cash: none. Floor: Boom, six minutes later: &#8220;It makes sense for both sides.&#8221; Then: &#8220;Well done. now come back to my office.&#8221; Dogs, fourteen minutes after: &#8220;Someone send me trades.&#8221; Likely 5.8 started. Monangai 6.8 on the bench.</div>
-      </div></div>
-      <div class="deal"><div class="num">03</div><div class="card">
-        <div class="when">Premier &#183; Tue Sep 15, 6:39 p.m.</div>
-        <div class="teams">Fart Toot Squeek / Backdoor Heat</div>
-        <div class="legs">Fart Toot received <strong>Jaylen Waddle, Colston Loveland, Tyler Allgeier</strong>. Heat received <strong>Jaylen Warren, Rashee Rice, Dallas Goedert</strong>. Cash: none. Floor: nobody had a word. Sunday the belt paid for the silence, 119.36 to 78.50. Waddle 18.8. Rice 10.3. Goedert 0.9.</div>
-      </div></div>
-      <div class="deal"><div class="num">04</div><div class="card">
-        <div class="when">Premier &#183; Thu Sep 17, 8:20 p.m. &#183; the big one</div>
-        <div class="teams">The Kickers n Jigba / Shiny Hineys</div>
-        <div class="legs">Jigba received <strong>Bijan Robinson, Chris Olave, Zach Charbonnet</strong>. Hineys received <strong>Davante Adams, Javonte Williams, Braelon Allen, Garrett Wilson</strong>. Cash on the slip: none. The Hineys say the bot forgot $5 FAAB from the Jigba. Floor: &#8220;Holy shit,&#8221; eleven seconds later. Both clubs 2-0. The scene is page 3.</div>
-      </div></div>
-      <div class="pull">
-        <div class="q" style="font-size:13pt;">&#8220;Holy hell. Was that a real trade?!&#8221;</div>
-        <div class="attr">Boom Baum &#183; Thursday, Sept. 17, 8:20 p.m.</div>
+      <div class="timeline">
+        <div class="deal-card" style="margin-bottom:7px;">
+          <div class="dhead"><span>Mon, Sept. 14 &#183; 8:55 p.m.</span><span class="dt">Written again at 2:02 a.m.; one deal</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">The Guy Next Door <span class="rcv">receives</span></div><div class="pl">Drake London, Dylan Sampson</div></div>
+            <div class="side"><div class="tm">Boom Baum <span class="rcv">receives</span></div><div class="pl">Caleb Williams, Tetairoa McMillan</div></div>
+          </div>
+          <div class="cons">Cash considerations: none</div>
+          <div class="floor"><b>The floor</b> &#183; Argued out on the pod, page 8. Sunday: London 6.9, Caleb 7.22, McMillan 13.6.</div>
+        </div>
+        <div class="deal-card" style="margin-bottom:7px;">
+          <div class="dhead"><span>Tue, Sept. 15 &#183; 5:30 p.m.</span><span class="dt">Tight end for a running back</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">The Kickers n Jigba <span class="rcv">receives</span></div><div class="pl">Isaiah Likely</div></div>
+            <div class="side"><div class="tm">Jackin&#8217; Goff <span class="rcv">receives</span></div><div class="pl">Kyle Monangai</div></div>
+          </div>
+          <div class="cons">Cash considerations: none</div>
+          <div class="floor"><b>The floor</b> &#183; Boom, six minutes later: &#8220;It makes sense for both sides.&#8221; Then: &#8220;Well done. now come back to my office.&#8221; Diamond Dogs: &#8220;Someone send me trades.&#8221; Likely scored 5.8. Monangai scored 6.8 on the bench.</div>
+        </div>
+        <div class="deal-card" style="margin-bottom:7px;">
+          <div class="dhead"><span>Tue, Sept. 15 &#183; 6:39 p.m.</span><span class="dt">The champion reshuffles</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">Fart Toot Squeek <span class="rcv">receives</span></div><div class="pl">Jaylen Waddle, Colston Loveland, Tyler Allgeier</div></div>
+            <div class="side"><div class="tm">Backdoor Heat <span class="rcv">receives</span></div><div class="pl">Jaylen Warren, Rashee Rice, Dallas Goedert</div></div>
+          </div>
+          <div class="cons">Cash considerations: none</div>
+          <div class="floor"><b>The floor</b> &#183; Nobody said a word. The two clubs met Sunday and Heat won 119.36 to 78.50. Waddle 18.8. Rice 10.3. Goedert 0.9.</div>
+        </div>
+        <div class="deal-card">
+          <div class="dhead"><span>Thu, Sept. 17 &#183; 8:20 p.m. &#183; Big</span><span class="dt">Both clubs 2-0 by Monday</span></div>
+          <div class="sides">
+            <div class="side"><div class="tm">The Kickers n Jigba <span class="rcv">receives</span></div><div class="pl">Bijan Robinson, Chris Olave, Zach Charbonnet</div></div>
+            <div class="side"><div class="tm">Shiny Hineys <span class="rcv">receives</span></div><div class="pl">Davante Adams, Javonte Williams, Braelon Allen, Garrett Wilson</div></div>
+          </div>
+          <div class="cons">Cash considerations: none on the slip. The Hineys say $5 FAAB.</div>
+          <div class="floor"><b>The floor</b> &#183; &#8220;Holy hell. Was that a real trade?!&#8221; Boom Baum, eleven seconds before &#8220;Holy shit.&#8221; The scene is page 5.</div>
+        </div>
       </div>
-      <div class="spacer"></div>
-    </div>
-    <div class="folio"><span>Transactions &#183; The Desk</span><span class="pg">07</span></div>
-  </div>
-</section>
-
-<!-- 08 TRANSACTIONS B -->
-<section class="page">
-  <div class="page-inner">
-    <div class="runhead"><span class="sec">Transactions</span><span class="iss">Knockout &#183; Heard at the Desk</span></div>
-    <div class="flow dense">
-      <div class="row-fixed">
-        <p class="kicker">Knockout Wire</p>
-        <h1 class="hed" style="font-size:24pt;">$300 on Hampton.<br/>$1,000 on Ja&#8217;Marr.</h1>
-        <p class="dek">The knockout kept spending. The Premier spent nothing on the wire.</p>
-        <p class="byline">Knockout &#183; Sept. 18&#8211;23</p>
-      </div>
-      <div class="deal"><div class="num">05</div><div class="card">
-        <div class="when">Knockout &#183; Fri Sep 18, 6:58 a.m. &#183; cash on Friday</div>
-        <div class="teams">The Otter is Jackin Goff / Robert&#8217;s Rowdy Team</div>
-        <div class="legs">Otter received <strong>Omarion Hampton</strong>. Rowdy received <strong>Caleb Douglas</strong>. Cash: +$300 FAAB to Rowdy on the Friday row. Floor: the Guy Next Door: &#8220;None of the people voting for Otter bid 300 on Hampton except for Otter.&#8221; Otter scored 62.02 and left.</div>
-      </div></div>
-      <div class="deal"><div class="num">06</div><div class="card">
-        <div class="when">Knockout &#183; Tue Sep 22, 9:52 p.m.</div>
-        <div class="teams">Boomer Frogs / Michael&#8217;s Magnificent Hiney</div>
-        <div class="legs">Frogs received <strong>Kyle Monangai</strong>. Hiney received <strong>Derrick Henry</strong>. Cash: 400 FAAB, per the Hiney in the channel; none on the slip. Floor: Cowboys September Dreams asked how much FAAB, &#8220;so I can decide who got fleeced.&#8221; The Hineys answered, &#8220;400.&#8221;</div>
-      </div></div>
-      <div class="box">
+      <div class="box" style="margin-top:8px;">
         <h4>Heard at the Desk</h4>
-        <p>Saturday morning, Champeens. Amburgers offered a public service: for $10 FAAB, Cowboys September Dreams would leave the tight end empty. The Dreams: &#8220;it&#8217;s either Loveland for 0 points in the TE slot or it&#8217;s no one in the TE slot for 0 points.&#8221; It drew eleven reactions. The Dreams again: &#8220;Most importantly, this is just another example of the innovations in fantasy football we can accomplish when we think with our Peen league.&#8221;</p>
-        <p style="margin:0;">Meanwhile, on the wire: Boomer Frogs $1,000 on Jeremiyah Love; Rowdy $650 on James Cook and $333 on Hampton; JackaWhack $1,000 on Ja&#8217;Marr Chase Wednesday; the Hineys $200 back onto Hampton. The Premier spent nothing.</p>
-      </div>
-      <div class="pull">
-        <div class="q" style="font-size:12.5pt;">Nah I already spent all my FAAB on Jamar</div>
-        <div class="attr">The Scott Ramsays &#183; Tuesday, Sept. 22, 9:01 p.m.</div>
+        <p>Saturday morning, downstairs, Amburgers offered Cowboys September Dreams $10 FAAB to leave his tight end slot empty. The Dreams did the math aloud: &#8220;it&#8217;s either Loveland for 0 points in the TE slot or it&#8217;s no one in the TE slot for 0 points.&#8221; Then, to eleven reactions: &#8220;Most importantly, this is just another example of the innovations in fantasy football we can accomplish when we think with our Peen league.&#8221;</p>
+        <p>Amburgers, declining a Javonte Williams offer Tuesday night: &#8220;I will not fall for the banana in the tailpipe of teams playing this cowboy defense&#8230;&#8221;</p>
       </div>
       <div class="spacer"></div>
     </div>
-    <div class="folio"><span>Transactions &#183; Knockout</span><span class="pg">08</span></div>
+    <div class="folio"><span>Transactions &#183; The Desk</span><span class="pg">09</span></div>
   </div>
 </section>
 
-<!-- 09 PREMIER SCOREBOARD -->
+<!-- 10 PREMIER SCOREBOARD -->
 <section class="page">
   <div class="page-inner">
-    <div class="runhead"><span class="sec">Scoreboard</span><span class="iss">Premier &#183; Week 2 &#183; ESPN 1851323</span></div>
+    <div class="runhead"><span class="sec">Scoreboard</span><span class="iss">Premier &#183; Week 2</span></div>
     <div class="flow">
       <div class="row-fixed">
-        <p class="kicker">Game of the Week</p>
-        <h1 class="hed" style="font-size:26pt;">The Pillow Fight</h1>
-        <p class="dek">Shiny Hineys 112.32, Boom Baum 89.22. Adams in the flex for 36.5. Bijan, three days a Jigba, scored 9.6 against the Ramsays.</p>
+        <p class="kicker">Premier Finals</p>
+        <h1 class="hed" style="font-size:28pt;">The Belt Is 0-2</h1>
+        <p class="dek">The Jigba and All Gold rolled. The champion lost to the club he had just traded with. Boom lost the pillow fight.</p>
       </div>
       <div class="gow">
         <p class="tag">Game of the Week &#183; The Pillow Fight</p>
         <div class="gow-row">
           <figure class="gow-art">
-            <img src="assets/wire_pillow_fight.jpg" alt="ESPN scoreboard: Shiny Hineys vs Boom Baum"/>
-            <p class="caption">&#8220;Your weekly pillow fight sponsored by Boom Baum and Shiny Hineys.&#8221; Shiny Hineys, Sept. 21.</p>
+            <img src="assets/wire_pillow_fight.jpg" alt="ESPN live score: Shiny Hineys 62.02, Boom Baum 83.22"/>
+            <p class="caption">&#8220;Your weekly pillow fight sponsored by Boom Baum and Shiny Hineys.&#8221; Posted Monday night with Boom ahead. The Hineys, Sept. 21.</p>
           </figure>
           <div>
             <div class="teams">
@@ -1287,28 +1492,22 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
               <div class="vs">DEF.</div>
               <div class="tm loser"><div class="nm">Boom Baum</div><div class="rec">0-2</div><div class="sc">89.22</div></div>
             </div>
-            <p class="gamer">Adams in the flex for 36.5. Bijan, three days a Jigba, scored 9.6 against the Ramsays. The argument is on page 3.</p>
+            <p class="gamer">When the Hineys posted the fight card Monday night, Boom led 83.22 to 62.02. He finished losing by 23.10. Davante Adams, three days a Hiney, put 36.5 in the flex. The next morning Boom was reading a letter.</p>
           </div>
         </div>
       </div>
-      <div class="stat-strip">
-        <div class="stat-box"><div class="n">152.14</div><div class="l">All Gold high</div></div>
-        <div class="stat-box"><div class="n">76.68</div><div class="l">Ramsays low</div></div>
-        <div class="stat-box"><div class="n">8.18</div><div class="l">Closest Premier</div></div>
-        <div class="stat-box"><div class="n">218.3</div><div class="l">WC &#183; Bread Boi</div></div>
-      </div>
       <div class="grid-2">
         <div>
-          <h2 class="subhed" style="font-size:11pt;">Matchups</h2>
-          <div class="strip"><div class="row"><b>All Gold, No Glory</b><span class="sc">152.14</span></div><div class="row loser"><span>The Little Bread Boi</span><span class="sc">119.98</span></div><div class="note">High of either flight. Goff 33.78 rode the bench.</div></div>
+          <h2 class="sb-h">Matchups</h2>
+          <div class="strip"><div class="row"><b>All Gold, No Glory</b><span class="sc">152.14</span></div><div class="row loser"><span>The Little Bread Boi</span><span class="sc">119.98</span></div><div class="note">High of either flight. The Bread Boi lost the name and then the game.</div></div>
           <div class="strip"><div class="row"><b>The Kickers n Jigba</b><span class="sc">144.62</span></div><div class="row loser"><span>The Scott Ramsays</span><span class="sc">76.68</span></div><div class="note">Allen 43.82, JSN 40.0. Bijan&#8217;s debut: 9.6.</div></div>
-          <div class="strip"><div class="row"><b>Backdoor Heat</b><span class="sc">119.36</span></div><div class="row loser"><span>Fart Toot Squeek</span><span class="sc">78.50</span></div><div class="note">Heat&#8217;s Dak, 33.76. The belt is 0-2.</div></div>
-          <div class="strip"><div class="row"><b>Texas Tornado&#8217;s Bush</b><span class="sc">113.38</span></div><div class="row loser"><span>Diamond Dogs</span><span class="sc">90.60</span></div><div class="note">Mahomes 31.98, Chase 23.0. Dogs&#8217; D/ST: 20.</div></div>
+          <div class="strip"><div class="row"><b>Backdoor Heat</b><span class="sc">119.36</span></div><div class="row loser"><span>Fart Toot Squeek</span><span class="sc">78.50</span></div><div class="note">Trade partners Tuesday, opponents Sunday. Dak 33.76.</div></div>
+          <div class="strip"><div class="row"><b>Texas Tornado&#8217;s Bush</b><span class="sc">113.38</span></div><div class="row loser"><span>Diamond Dogs</span><span class="sc">90.60</span></div><div class="note">Mahomes 31.98. The Dogs&#8217; defense scored 20 and it did not matter.</div></div>
           <div class="strip"><div class="row"><b>Shiny Hineys</b><span class="sc">112.32</span></div><div class="row loser"><span>Boom Baum</span><span class="sc">89.22</span></div><div class="note">The pillow fight. Adams 36.5.</div></div>
-          <div class="strip"><div class="row"><b>The Guy Next Door</b><span class="sc">89.76</span></div><div class="row loser"><span>Jackin&#8217; Goff</span><span class="sc">81.58</span></div><div class="note">Closest Premier game, by 8.18.</div></div>
+          <div class="strip"><div class="row"><b>The Guy Next Door</b><span class="sc">89.76</span></div><div class="row loser"><span>Jackin&#8217; Goff</span><span class="sc">81.58</span></div><div class="note">Closest Premier game, by 8.18. Not an overreaction.</div></div>
         </div>
         <div>
-          <h2 class="subhed" style="font-size:11pt;">Standings</h2>
+          <h2 class="sb-h">Standings</h2>
           <table class="stand">
             <tr><th></th><th></th><th>Team</th><th>W-L</th><th style="text-align:right">PF</th></tr>
             <tr><td class="rk">1</td><td class="mv">&#8211;</td><td>The Kickers n Jigba</td><td>2-0</td><td class="n">324.5</td></tr>
@@ -1317,7 +1516,7 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             <tr><td class="rk">4</td><td class="mv">&#8593;</td><td>Shiny Hineys</td><td>2-0</td><td class="n">205.9</td></tr>
             <tr><td class="rk">5</td><td class="mv">&#8595;</td><td>Diamond Dogs</td><td>1-1</td><td class="n">225.5</td></tr>
             <tr><td class="rk">6</td><td class="mv">&#8593;</td><td>Backdoor Heat</td><td>1-1</td><td class="n">209.9</td></tr>
-            <tr class="wc"><td class="rk">WC</td><td class="mv">&#8211;</td><td>The Little Bread Boi</td><td>0-2</td><td class="n">218.3</td></tr>
+            <tr class="wc"><td class="rk">WC</td><td class="mv"></td><td>The Little Bread Boi</td><td>0-2</td><td class="n">218.3</td></tr>
             <tr><td class="rk">7</td><td class="mv">&#8593;</td><td>The Guy Next Door</td><td>1-1</td><td class="n">181.3</td></tr>
             <tr><td class="rk">8</td><td class="mv">&#8595;</td><td>The Scott Ramsays</td><td>1-1</td><td class="n">176.2</td></tr>
             <tr><td class="rk">9</td><td class="mv">&#8593;</td><td>The Little Bread Boi</td><td>0-2</td><td class="n">218.3</td></tr>
@@ -1325,42 +1524,43 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             <tr><td class="rk">11</td><td class="mv">&#8595;</td><td>Jackin&#8217; Goff</td><td>0-2</td><td class="n">206.3</td></tr>
             <tr><td class="rk">12</td><td class="mv">&#8595;</td><td>Boom Baum</td><td>0-2</td><td class="n">188.0</td></tr>
           </table>
-          <p class="wcrail">Wild card, Premier only. Yellow is the points seed at the seven line. The Little Bread Boi, 218.3, also ranks ninth. Arrows are the move from Week 1.</p>
+          <p class="wcrail">Yellow line: the wild card, the most points outside the top six. The Little Bread Boi holds it at 0-2 and also appears at ninth, where the record puts him. Arrows are the move from Week 1.</p>
         </div>
       </div>
+      <div class="sups">
+        <div class="sup"><div class="k">High Score</div><div class="v">152.14</div><div class="w">All Gold, No Glory</div></div>
+        <div class="sup"><div class="k">Low Score</div><div class="v">76.68</div><div class="w">The Scott Ramsays</div></div>
+        <div class="sup"><div class="k">Closest Game</div><div class="v">8.18</div><div class="w">Guy Next Door over Goff</div></div>
+        <div class="sup"><div class="k">Biggest Win</div><div class="v">67.94</div><div class="w">Jigba over the Ramsays</div></div>
+      </div>
+      <div class="spacer"></div>
     </div>
-    <div class="folio"><span>Premier Scoreboard</span><span class="pg">09</span></div>
+    <div class="folio"><span>Premier Scoreboard</span><span class="pg">10</span></div>
   </div>
 </section>
 
-<!-- 09 CHAMPEENS SCOREBOARD -->
+<!-- 11 CHAMPEENS SCOREBOARD + POINT AFTER -->
 <section class="page">
   <div class="page-inner">
-    <div class="runhead"><span class="sec">Scoreboard</span><span class="iss">Champeens &#183; Week 2 &#183; ESPN 1695026336</span></div>
+    <div class="runhead"><span class="sec">Scoreboard</span><span class="iss">Champeens &#183; Week 2 &#183; Point After</span></div>
     <div class="flow">
       <div class="row-fixed">
-        <p class="kicker">Downstairs Finals</p>
-        <h1 class="hed" style="font-size:26pt;">Otter Atop.<br/>Closest by 2.58.</h1>
-        <p class="dek">Otter, Mac Attack, Amburgers, and Madison Beer are all 2-0. Madison Beer beat Neaux Gold, All Glory by 2.58, the closest game in either flight.</p>
-      </div>
-      <div class="stat-strip">
-        <div class="stat-box"><div class="n">132.98</div><div class="l">Mac Attack high</div></div>
-        <div class="stat-box"><div class="n">73.52</div><div class="l">Neaux Gold low</div></div>
-        <div class="stat-box"><div class="n">2.58</div><div class="l">Closest either</div></div>
-        <div class="stat-box"><div class="n">62.02</div><div class="l">Knockout &#183; Chopped</div></div>
+        <p class="kicker">Champeens Finals</p>
+        <h1 class="hed" style="font-size:26pt;">Four at 2-0, One by 2.58</h1>
+        <p class="dek">Otter, Mac Attack, Amburgers and Madison Beer are unbeaten. Madison Beer got there by the closest margin in either flight.</p>
       </div>
       <div class="grid-2">
         <div>
-          <h2 class="subhed" style="font-size:11pt;">Matchups</h2>
-          <div class="strip"><div class="row"><b>Mac Attack</b><span class="sc">132.98</span></div><div class="row loser"><span>Jerry GM + Jerry Owner</span><span class="sc">107.38</span></div><div class="note">Purdy 30.48, DeVonta 23.7, CMC 20.6.</div></div>
-          <div class="strip"><div class="row"><b>Amburgers</b><span class="sc">122.28</span></div><div class="row loser"><span>Cowboys September Dreams</span><span class="sc">112.72</span></div><div class="note">Allen&#8217;s 43.82 was the best QB line down here. It lost.</div></div>
+          <h2 class="sb-h">Matchups</h2>
+          <div class="strip"><div class="row"><b>Mac Attack</b><span class="sc">132.98</span></div><div class="row loser"><span>Jerry GM + Jerry Owner</span><span class="sc">107.38</span></div><div class="note">The commissioner&#8217;s other club. Purdy 30.48. See page 4.</div></div>
+          <div class="strip"><div class="row"><b>Amburgers</b><span class="sc">122.28</span></div><div class="row loser"><span>Cowboys September Dreams</span><span class="sc">112.72</span></div><div class="note">Allen&#8217;s 43.82, the best QB line down here, lost.</div></div>
           <div class="strip"><div class="row"><b>Chase Is My Leader</b><span class="sc">121.28</span></div><div class="row loser"><span>Prime Lime Time</span><span class="sc">94.38</span></div><div class="note">Dak 33.76 off the bench, Lamb 32.3.</div></div>
-          <div class="strip"><div class="row"><b>Otter</b><span class="sc">112.66</span></div><div class="row loser"><span>OKC Schlegstas</span><span class="sc">90.86</span></div><div class="note">Adams 36.5 and Bijan 9.6, on one roster. 2-0.</div></div>
-          <div class="strip"><div class="row"><b>The Jackal</b><span class="sc">107.50</span></div><div class="row loser"><span>Jordan&#8217;s Trainers</span><span class="sc">82.22</span></div><div class="note">Amon-Ra 31.7.</div></div>
-          <div class="strip"><div class="row"><b>Madison Beer</b><span class="sc">76.10</span></div><div class="row loser"><span>Neaux Gold, All Glory</span><span class="sc">73.52</span></div><div class="note">Closest either flight, by 2.58.</div></div>
+          <div class="strip"><div class="row"><b>Otter</b><span class="sc">112.66</span></div><div class="row loser"><span>OKC Schlegstas</span><span class="sc">90.86</span></div><div class="note">Adams 36.5 and Bijan 9.6 on one roster. Also, a daughter who writes letters.</div></div>
+          <div class="strip"><div class="row"><b>The Jackal</b><span class="sc">107.50</span></div><div class="row loser"><span>Jordan&#8217;s Trainers</span><span class="sc">82.22</span></div><div class="note">Amon-Ra 31.7. Tuesday remains the worst day.</div></div>
+          <div class="strip"><div class="row"><b>Madison Beer</b><span class="sc">76.10</span></div><div class="row loser"><span>Neaux Gold, All Glory</span><span class="sc">73.52</span></div><div class="note">Closest in either flight. Neaux Gold is 0-2, one of them retroactive.</div></div>
         </div>
         <div>
-          <h2 class="subhed" style="font-size:11pt;">Standings</h2>
+          <h2 class="sb-h">Standings</h2>
           <table class="stand">
             <tr><th></th><th></th><th>Team</th><th>W-L</th><th style="text-align:right">PF</th></tr>
             <tr><td class="rk">1</td><td class="mv">&#8211;</td><td>Otter</td><td>2-0</td><td class="n">252.8</td></tr>
@@ -1376,67 +1576,24 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
             <tr><td class="rk">11</td><td class="mv">&#8211;</td><td>OKC Schlegstas</td><td>0-2</td><td class="n">182.5</td></tr>
             <tr><td class="rk">12</td><td class="mv">&#8211;</td><td>Jordan&#8217;s Trainers</td><td>0-2</td><td class="n">173.3</td></tr>
           </table>
-          <div class="sups" style="grid-template-columns:1fr 1fr;margin-top:12px;">
-            <div class="sup"><div class="k">High Score</div><div class="v">132.98</div><div class="w">Mac Attack</div></div>
-            <div class="sup"><div class="k">Knockout &#183; Chopped</div><div class="v">62.02</div><div class="w">The Otter is Jackin Goff</div></div>
+          <div class="box" style="margin:10px 0 0;">
+            <h4>Week 3 card</h4>
+            <p style="font-size:8.6pt;text-align:left;"><b>Premier.</b> Boom Baum vs Fart Toot Squeek. Jigba vs Guy Next Door. All Gold vs Diamond Dogs. Heat vs Ramsays. Hineys vs Texas Tornado. Bread Boi vs Jackin&#8217; Goff.</p>
+            <p style="font-size:8.6pt;text-align:left;"><b>Champeens.</b> Dreams vs Chase Is My Leader. Prime Lime vs Jerry. Amburgers vs the Jackal. Mac vs Madison Beer. Jordan vs OKC. Neaux Gold vs Otter.</p>
           </div>
         </div>
       </div>
-      <div class="box" style="margin-top:8px;">
-        <h4>Week 3 card &#183; pairings only, not a final</h4>
-        <div class="wk3">
-          <div>
-            <p><b>Premier.</b> Boom Baum vs Fart Toot Squeek. Jigba vs Guy Next Door. All Gold vs Diamond Dogs. Heat vs the Scott Ramsays. Hineys vs Texas Tornado. Bread Boi vs Jackin&#8217; Goff.</p>
-          </div>
-          <div>
-            <p><b>Champeens.</b> Dreams vs Chase Is My Leader. Prime Lime vs Jerry. Amburgers vs the Jackal. Mac vs Madison Beer. Jordan vs OKC. Neaux Gold vs Otter.</p>
-          </div>
-        </div>
-      </div>
-      <div class="spacer"></div>
-    </div>
-    <div class="folio"><span>Champeens Scoreboard</span><span class="pg">10</span></div>
-  </div>
-</section>
-
-<!-- 10 AIRWAVES + POINT AFTER -->
-<section class="page">
-  <div class="page-inner">
-    <div class="runhead"><span class="sec">On the Airwaves</span><span class="iss">S05 EP03 &#183; Point After</span></div>
-    <div class="flow">
-      <div class="row-fixed">
-        <p class="kicker">The League of Record</p>
-        <h1 class="hed" style="font-size:26pt;">A Note on<br/>the Hour</h1>
-        <p class="dek">S05 EP03 on Thursday, guest the Guy Next Door. No transcript in the book.</p>
-        <p class="byline">The League of Record &#183; Sept. 17, 2026</p>
-      </div>
-      <div class="clearfix">
-        <figure class="wire right" style="width:2.3in;">
-          <img src="assets/wire_shippy_pigs.jpg" alt="Little Baker rolling a man in dough" style="height:3.4in;object-position:center 32%"/>
-          <figcaption>Pigs in a blanket. H Town kept posting after the name stuck.</figcaption>
-        </figure>
-        <div class="body drop">
-          <p>S05 EP03, Don&#8217;t Overreact (I&#8217;m Going to Overreact), landed at 2:30 p.m. on Sept. 17. The guest was the Guy Next Door. Bijan moved at 8:20 that night.</p>
-          <p>The shelf ends at S05 EP02. This issue does not quote the hour.</p>
-        </div>
-        <h2 class="subhed" style="font-size:12pt;margin-top:10px;">Knockout</h2>
-        <div class="body">
-          <p>Week 2 in the knockout, last place leaves. Glory Burgers 138.32 led the week. Robert&#8217;s Rowdy Team scored 127.08. The Otter is Jackin Goff scored 62.02 and was eliminated. Fart Toot Sneak had already left in Week 1, when 86.9 was the low score. Cowboys September Farts survived on 65.20, 3.18 points ahead of the club that left.</p>
-        </div>
-      </div>
-      <hr class="rule-thick"/>
-      <div class="row-fixed">
+      <div class="closer">
         <p class="kicker">Point After</p>
-        <h2 class="subhed" style="font-size:16pt;">Forty-one to go</h2>
-        <div class="body">
-          <p>Seven Premier trades on the season by the time Bijan moved, and the Guy Next Door deal is one deal. Four of them are Boom&#8217;s. This week&#8217;s Desk shows four deals; one of them is his. He asked for 45. He is short 41.</p>
-        </div>
+        <h2>0-2 vs. 0-2</h2>
+        <p>Sunday Boom Baum plays Fart Toot Squeek. One asked the league for forty-five trades and received a letter from a child. The other changed the kicker rules a year early and handed his nemesis a win. Neither has won a game that counted.</p>
+        <p>One of them will be 1-2 on Monday. The other will need some mail.</p>
       </div>
       <div class="colophon">
-        LANA STRAW WEEKLY &#183; Week 2, 2026 &#183; Issue date Sept. 23. Corrected in this edition: the Scott Ramsays are last in points, at 176.2. Boom Baum is 0-2 on 188.0. Thomas&#8217;s Terrific Team won the name contest on Week 1 starting lineups, 99.54 to 98.3. The $5 on the Bijan deal is the Hineys&#8217; claim. The bot did not print it. Trades stop at Bijan, Sept. 17: seven Premier deals on the season, the Guy Next Door swap counted once, four of them Boom&#8217;s; four this week on the Desk, one of them his. The Hampton swap is written twice; the $300 is the Friday version. Times are Central. Nothing here is a lineup.
+        LANA STRAW WEEKLY &#183; Week 2, 2026 &#183; Closed Sept. 23, Central time. Scores are ESPN finals for the Premier and Champeens; the knockout is the league&#8217;s knockout board. Quotes are verbatim from the Discord, typos included, or from the S05 EP03 transcript; the pod&#8217;s &#8220;boom, bomb&#8221; is printed as Boom Baum. Corrected in this edition: the Week 1 issue printed Neaux Gold, All Glory over Jerry GM + Jerry Owner by 0.30. After the commissioner restored this season&#8217;s kicker scoring, Jerry won; standings here reflect it. The $5 on the Bijan deal and the 400 on the Henry deal are the Hineys&#8217; word, not the slip&#8217;s. The letter is transcribed exactly as written.
       </div>
     </div>
-    <div class="folio"><span>On the Airwaves &#183; Point After</span><span class="pg">11</span></div>
+    <div class="folio"><span>Champeens Scoreboard &#183; Point After</span><span class="pg">11</span></div>
   </div>
 </section>
 
