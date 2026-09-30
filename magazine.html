@@ -1194,6 +1194,30 @@ figcaption .cred { color: var(--gold); font-weight: 600; }
 table.standings tr.wc td { background: #f3e6b8; border-bottom: 1px solid #e0c95a; font-weight: 700; }
 table.standings tr.wc td:first-child { color: var(--gold); font-weight: 800; }
 
+/* ---- typographic cover (use when no league photo is print-quality at full bleed) ---- */
+.cover.type { background: radial-gradient(circle at 72% 30%, #2a1418 0%, #0c1016 62%); }
+.cover.type .ghost {
+  position: absolute; right: -.25in; top: 1.15in; z-index: 1;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 900; font-size: 300pt;
+  line-height: .8; letter-spacing: -.07em; color: rgba(212,181,106,.16);
+}
+.cover.type .pin-photo {
+  position: absolute; left: .62in; top: 1.45in; z-index: 2; width: 3.05in; background: #fbfaf5;
+  padding: 10px 10px 40px; transform: rotate(-4deg); box-shadow: 0 22px 50px rgba(0,0,0,.6);
+}
+.cover.type .pin-photo img { width: 100%; height: 3.6in; object-fit: cover; display: block; }
+.cover.type .pin-photo .cap { position: absolute; left: 0; right: 0; bottom: 9px; text-align: center; color: #1f2d6b;
+  font-family: 'Bradley Hand', 'Marker Felt', cursive; font-size: 15pt; }
+.cover.type .pin { position: absolute; left: 2.05in; top: 1.3in; z-index: 3; width: 22px; height: 22px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ff6b6b, #8a1a28 70%); box-shadow: 0 4px 8px rgba(0,0,0,.5); }
+.cover.type .cover-quote {
+  position: absolute; right: .55in; top: 1.9in; width: 3.2in; z-index: 2;
+  font-size: 15pt; font-style: italic; line-height: 1.3; color: var(--cream);
+}
+.cover.type .cover-quote .who { display: block; margin-top: 8px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal; font-size: 7pt; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-lite); }
+.cover.type .cover-hed-block { bottom: 1.42in; }
+
 </style>
 <div class="rack">
 <!-- 01 COVER -->
