@@ -1225,6 +1225,72 @@ table.standings tr.wc td:first-child { color: var(--gold); font-weight: 800; }
 .cover.type .pin-photo.two img { height: 3.25in; }
 .cover.type .pin.two { left: auto; right: 1.8in; top: 1.8in; z-index: 4; }
 
+/* ---- Poster cover (Week 4): the art stays uncovered. A dark band on top carries the mast, hed, dek
+   and sells; the art sits below it on a black mat, above the cover bar. ---- */
+.cover.poster { background: #07090d; }
+.cover.poster .poster-band { position: absolute; top: 0; left: 0; right: 0; height: 2.62in; z-index: 2;
+  background: linear-gradient(to bottom, #07090d 0%, #0d0f15 100%); border-bottom: 2px solid var(--gold); }
+.cover.poster .cover-art { top: 2.62in; bottom: .4in; left: .42in; right: .42in; }
+.cover.poster .cover-art img { object-position: center 92%; }
+.cover.poster .cover-hed-block { top: 1.0in; bottom: auto; }
+.cover.poster .cover-kicker { margin-bottom: 4px; }
+.cover.poster .cover-hed { font-size: 31pt; line-height: .95; white-space: nowrap; letter-spacing: -.02em; }
+.cover.poster .cover-dek { font-size: 10pt; margin-top: 6px; max-width: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cover.poster .cover-sells.row { position: absolute; top: 2.02in; left: .48in; right: .48in; width: auto; z-index: 3;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 .2in; }
+.cover.poster .cover-sells.row .sell { font-size: 7.6pt; padding: 4px 0 0; }
+
+/* ---- Annotated scripture (Week 4): a reprinted post set as text with numbered editor's notes in a rail. ---- */
+.annot { display: grid; grid-template-columns: 1fr 1.9in; gap: 0 16px; align-items: start; }
+.scripture { font-size: 9.1pt; line-height: 1.4; column-count: 2; column-gap: 16px; text-wrap: pretty; }
+.scripture p { margin: 0 0 5px; text-indent: 0; }
+.scripture.airy p { margin-bottom: 8px; }  /* a shorter reprint page opens its paragraphs to fill the column */
+.scripture .part { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.8pt; font-weight: 800;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--crimson); margin: 7px 0 2px; break-after: avoid; }
+.scripture .part:first-child { margin-top: 0; }
+.scripture sup.n, .notes-rail .note b { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; color: var(--crimson); font-weight: 800; }
+.scripture sup.n { font-size: 6.3pt; margin-left: 1px; }
+.scripture .big { font-size: 13pt; font-weight: 900; font-style: italic; letter-spacing: .04em; }
+.notes-rail { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7.4pt; line-height: 1.32;
+  border-left: 2px solid var(--crimson); padding-left: 9px; text-wrap: pretty; }
+.notes-rail h3 { font-size: 7pt; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 6px; }
+.notes-rail .note { margin-bottom: 7px; }
+.notes-rail .note b { margin-right: 3px; }
+
+/* ---- Applause meter: a reaction count per item as a bar. ---- */
+.meter .m-row { display: grid; grid-template-columns: 1.15in 1fr .35in; gap: 8px; align-items: center; padding: 3px 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 7.6pt; border-top: 1px solid var(--rule-soft); }
+.meter .m-bar { height: 9px; background: var(--crimson); }
+.meter .m-bar.zero { background: none; border-left: 2px solid var(--muted); }
+.meter .m-n { text-align: right; font-weight: 800; }
+
+/* ---- Prediction scorecard marks (Week 4): green check for a hit, red cross for a miss, on .review lists. ---- */
+.review li.hit::before, .review li.miss::before { font-style: normal; font-weight: 900; }
+.review li.hit::before { content: "\2713"; color: #2e7d32; }
+.review li.miss::before { content: "\2717"; color: #b3261e; }
+.review li.hit b { color: #2e7d32; }
+.review li.miss b { color: #b3261e; }
+
+/* ---- Injury report grid (Week 4): one card per player with a status tag, a one-line note and whose roster. ---- */
+.injury-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px 12px; }
+.inj { border-top: 2px solid var(--ink); padding: 5px 0 0; font-size: 8.4pt; line-height: 1.3;
+  display: flex; flex-direction: column; }
+.inj .nm { font-weight: 900; font-size: 9.6pt; line-height: 1.15; }
+/* the status tag sits on its own line above the name; the "who" line is pinned to the card bottom */
+.inj .tag { align-self: flex-start; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6pt; font-weight: 800;
+  line-height: 1.3; letter-spacing: .12em; text-transform: uppercase; padding: 1px 5px; margin: 0 0 3px; color: #fff; background: var(--crimson); }
+.inj .tag.out { background: var(--ink); }
+.inj .tag.old { background: var(--gold); color: var(--ink); }
+.inj .note { margin-top: 1px; }
+.inj .who { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); margin-top: auto; padding-top: 3px; }
+.inj.last { border-top-color: var(--gold); }
+
+/* ---- Week 4: a box that closes a page's flow, just above the spacer, drops its bottom margin. ---- */
+.box.end { margin-bottom: 0; }
+/* ---- Week 4: a banner quote that closes a page drops its bottom rule; the folio rule closes it instead. ---- */
+.banner-q.end { border-bottom: 0; }
+
 </style>
 <div class="rack">
 <!-- 01 COVER -->
